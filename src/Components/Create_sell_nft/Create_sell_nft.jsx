@@ -1,15 +1,16 @@
 import React from "react";
+import './Create_sell_nft.css'
 
 export default function Create_sell_nft() {
   return (
     <div>
-      <section class="dark:bg-jacarta-800 relative py-24">
+      <section class="dark:bg-jacarta-800 Create_sell_nft_div relative py-24">
         <picture class="pointer-events-none absolute inset-0 -z-10 dark:hidden">
-          <img
-            src="asset/img/gradient_light.jpg"
+          {/* <img
+            src="bg3.png"
             alt="gradient"
             class="h-full"
-          />
+          /> */}
         </picture>
         <div class="container">
           <h2 class="font-display text-jacarta-700 mb-16 text-center text-3xl dark:text-white">

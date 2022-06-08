@@ -182,21 +182,9 @@ a, a:hover, a:focus, a:active {
   overflow: hidden;
 }
 
-.single-live-auction .auction-thumb img {
-  /* -webkit-transition-duration: 800ms;
-  -o-transition-duration: 800ms;
-  transition-duration: 800ms; */
-}
-
-.single-live-auction:hover .auction-thumb img {
-  /* -webkit-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  transform: scale(1.2); */
-}
-
 
 .breadcrumb-area{
-  background-image: url("../../assets/bg-shape-2.png");
+  /* background-image: url("../../assets/bg-shape-2.png"); */
   background-color: rgb(22,22,52);
   height: 350px;
 }

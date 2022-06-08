@@ -4,7 +4,7 @@ import "./Road.css";
 export default function Road() {
   return (
     <div>
-     <section class=" pb-24">
+     <section class="road_div pb-24">
                 <div class="container">
                     <h2 class="p_text font-display text-jacarta-700 mb-8 text-center text-3xl dark:text-white">
                         NFTs Roadmap Project

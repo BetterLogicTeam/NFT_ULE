@@ -9,6 +9,7 @@ export default function Collection_main() {
   return (
     <div>
         <div class="breadcrumb-area" >
+          <div className='second_img'>
         <div class="container h-100">
             <div class="row h-100 align-items-center justify-content-center">
                 <div class="col-lg-5">
@@ -21,6 +22,7 @@ export default function Collection_main() {
                         </ul>
                     </div>
                 </div>
+            </div>
             </div>
         </div>
     </div>

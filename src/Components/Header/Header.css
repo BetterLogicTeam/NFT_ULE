@@ -9,7 +9,7 @@
 }
 
 .link_text{
-    color: rgb(255, 251, 1);
+    color: rgb(251,197,11);
 }
 
 .link_text:hover{
@@ -28,7 +28,7 @@
 .btna_navbar_here{
     padding: 3px 15px 5px 15px !important;
     /* border: 2px solid rgb(253,86,42) !important; */
-    background-color: rgb(255, 251, 1) !important;
+    background-color: rgb(251,197,11) !important;
     border-radius: 2rem !important;
     color: black !important;
     font-size: 1.3rem !important;
@@ -44,7 +44,8 @@
 @media screen and (max-width:600px) {
 
     .pic img{
-        width: 4rem;
+        width: 7rem !important;
+        margin-left: 2rem !important;
     }
     .hzna{
         margin-left: rem;

@@ -44,7 +44,7 @@ export default function Crypto() {
   
   return (
     <div>
-      <section class=" pb-24 pt_240">
+      <section class="crypto_div pb-24 pt_240">
                 <div class="container">
                     <h2 class="p_text font-display text-jacarta-700 mb-8 text-center text-3xl dark:text-white">
                         Top Cryptocurrencies
@@ -55,7 +55,7 @@ export default function Crypto() {
                         <div class="col_3">
                             <div class="crypto">
                                 <div class="crypto_img">
-                                    <img src="asset/img/bnb.png"/>
+                                    <img src="bnb.png"/>
                                 </div>
                                 <div class="crypto_content">
                                     <p>Binance Coin</p>
@@ -66,7 +66,7 @@ export default function Crypto() {
                         <div class="col_3">
                             <div class="crypto">
                                 <div class="crypto_img">
-                                    <img src="asset/img/ule-100.png"/>
+                                    <img src="ule-100.png"/>
                                 </div>
                                 <div class="crypto_content">
                                     <p>ULE</p>

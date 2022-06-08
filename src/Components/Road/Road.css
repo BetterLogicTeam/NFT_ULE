@@ -8,13 +8,13 @@
     margin-bottom: 2.5rem;
 }
 
-.hala{
-    background-image: url("../../assets/blue.png");
-    height: auto !important;
+.road_div{
+    background-image: url("../../assets/bg1.gif") !important;
+    /* height: auto !important;
     display: flex;
     justify-content: center;
     align-items: center;
-   padding-top: 50px;
+   padding-top: 50px; */
 }
 
 .single-road-map-item::after {

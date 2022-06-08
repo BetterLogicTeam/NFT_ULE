@@ -49,7 +49,7 @@ function value(myvalue){
         <ToastContainer />
         <Routes>
           <Route exact path="/" element={<Index_main />} />
-          <Route exact path="/About_main" element={<About_main />} />  
+          {/* <Route exact path="/About_main" element={<About_main />} />   */}
           <Route exact path="/Collection_main" element={<Collection_main />} />
           <Route exact path="/Benefits_main" element={<Benefits_main />} />
           <Route exact path="/Road_main" element={<Road_main />} />

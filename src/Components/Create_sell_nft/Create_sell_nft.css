@@ -1,0 +1,17 @@
+.Create_sell_nft_div{
+    background-image: url("../../assets/bg3.png") !important;
+    background-size: cover;
+}
+
+@media screen and (max-width:480px) {
+    .Create_sell_nft_div{
+        background-image: none !important
+    }
+}
+
+@media (min-width:480px) and (max-width:768px) {
+    .Create_sell_nft_div{
+        background-size: cover !important;
+        width: auto !important;
+    }
+}

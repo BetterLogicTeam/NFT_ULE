@@ -749,11 +749,11 @@ function Mint() {
                                     <div className="mint-content">
                                         <div className="mint-item">
                                             <div className="quantity">
-                                                <div className="">
+                                                {/* <div className="">
                                                     <button className="btn count-form" type="text" value={value} onChange={(e) => setValue(e.target.value)} id="qtyBox" >1
                                                         </button>
 
-                                                </div>
+                                                </div> */}
                                                 
                                                 <div className="top_div_here">
                                                     <div className="btn-area1 mt-5">
