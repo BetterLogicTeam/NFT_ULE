@@ -27,7 +27,7 @@ export default function Crypto() {
       let getdata= await axios.get("https://whenftapi.herokuapp.com/wheliverate?id=1")
       console.log("secondapi",getdata.data.data);
 
-      setdataapi(getdata.data.data)
+      setdataapi(getdata.data.data).toFixed(4)
     }catch(e){
       console.log("Error While Fetch Api ",e);
     }
@@ -59,7 +59,7 @@ export default function Crypto() {
                                 </div>
                                 <div class="crypto_content">
                                     <p>Binance Coin</p>
-                                    <h1> USD 00.00</h1>
+                                    <h1> USD {Users}</h1>
                                 </div>
                             </div>
                         </div>
@@ -70,7 +70,7 @@ export default function Crypto() {
                                 </div>
                                 <div class="crypto_content">
                                     <p>ULE</p>
-                                    <h1> ULE 00.00</h1>
+                                    <h1> ULE {dataapi}</h1>
                                 </div>
                             </div>
                         </div>

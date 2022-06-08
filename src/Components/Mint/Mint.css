@@ -91,3 +91,23 @@
         width: auto !important;
     }
 }
+
+
+.model_bg{
+  background-image: url("../../assets/bg1.gif") !important;
+    
+}
+
+.btn_box_model {
+    font-size: 25px !important;
+    font-weight: 400 !important;
+    color: black !important;
+    background-color: rgb(251,197,11) !important;
+    font-family: 'Roboto', sans-serif !important;
+    border: none !important;
+    border-radius: 10px !important;
+    text-align: center !important;
+    padding: 5px 25px 5px 25px !important;
+    /* margin-left: -15rem !important;
+    margin-top: -2rem !important; */
+}

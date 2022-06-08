@@ -38,56 +38,68 @@ function Footer() {
                 <div class="width_50 ftr">
                   <ul class="ft_color flex flex-col space-y-1">
                     <li>
+                      
+                    <Link to="/" className="link_text" >
                       <a
-                        href="index.html"
+                       
                         class="hover:text-accent dark:hover:text-white"
                       >
                         Home
                       </a>
+                      </Link>
                     </li>
-                    <li>
+                    {/* <li>
                       <a
                         href="javascript:void(0)"
                         class="hover:text-accent dark:hover:text-white"
                       >
                         About
                       </a>
-                    </li>
+                    </li> */}
                     <li>
+                    <Link to="/Collection_main" className="link_text" >
                       <a
-                        href="collection.html"
+                      
                         class="hover:text-accent dark:hover:text-white"
                       >
                         Collection
                       </a>
+                      </Link>
+                    </li>
+                    <li>
+                    <Link to="/Benefits_main" className="link_text" >
+                      <a
+                     
+                        class="hover:text-accent dark:hover:text-white"
+                      >
+                        Benifits
+                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </div>
                 <div class="width_50 ftr2">
                   <ul class="ft_color flex flex-col space-y-1">
+                  
                     <li>
+                    <Link to="/Road_main" className="link_text" >
                       <a
-                        href="benifits.html"
-                        class="hover:text-accent dark:hover:text-white"
-                      >
-                        Benifits
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="roadmap.html"
+                      
                         class="hover:text-accent dark:hover:text-white"
                       >
                         Roadmap
                       </a>
+                      </Link>
                     </li>
                     <li>
+                    <Link to="/Mint_main" className="link_text" >
                       <a
-                        href="mint.html"
+                
                         class="hover:text-accent dark:hover:text-white"
                       >
                         Mint
                       </a>
+                      </Link>
                     </li>
                   </ul>
                 </div>
