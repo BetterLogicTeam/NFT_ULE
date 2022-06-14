@@ -1,35 +1,47 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./Header.css";
 import { Nav, Navbar, Container } from "react-bootstrap";
 import { Link } from 'react-router-dom'
 import { loadWeb3, } from '../../apis/api';
-export default function Header() {
-  let [btnTxt, setBtTxt] = useState("Connect")
+export default function Header({setchainid}) {
+    let [btnTxt, setBtTxt] = useState("Connect")
+    const selectoption = useRef();
 
-  const getAccount = async () => {
-      let acc = await loadWeb3();
-      // console.log("ACC=",acc)
-      if (acc == "No Wallet") {
-          setBtTxt("No Wallet")
-      }
-      else if (acc == "Wrong Network") {
-          setBtTxt("Wrong Network")
-      } else {
-          let myAcc = acc?.substring(0, 4) + "..." + acc?.substring(acc?.length - 4);
-          setBtTxt(myAcc);
+    const getAccount = async () => {
+        let acc = await loadWeb3();
+        // console.log("ACC=",acc)
+        if (acc == "No Wallet") {
+            setBtTxt("No Wallet")
+        }
+        else if (acc == "Wrong Network") {
+            setBtTxt("Wrong Network")
+        } else {
+            let myAcc = acc?.substring(0, 4) + "..." + acc?.substring(acc?.length - 4);
+            setBtTxt(myAcc);
 
-      }
-  }
+        }
+       
+    }
 
-  useEffect(() => {
-      setInterval(() => {
-          getAccount();
-      }, 1000);
-  }, []);
-  return (
-    <div>
 
-{/* <header className="js-page-header head_div fixed top-0 z-20 w-full backdrop-blur transition-colors js-page-header--is-sticky">
+
+     const chain_id_here=()=>{
+        let selecthere = selectoption.current.value;
+        
+        setchainid(selecthere)
+    }
+
+    useEffect(() => {
+        setInterval(() => {
+            getAccount();
+        // chain_id_here()
+
+        }, 1000);
+    }, []);
+    return (
+        <div>
+
+            {/* <header className="js-page-header head_div fixed top-0 z-20 w-full backdrop-blur transition-colors js-page-header--is-sticky">
             <div className="flex items-center px-6 py-6 xl:px-24">
                 
                 <a href="index.html" className="shrink-0">
@@ -136,52 +148,62 @@ export default function Header() {
             </div>
         </header> */}
 
-        
-            
-      <div className="maina">
-        <Navbar
-          className="Headera"
-          collapseOnSelect
-          expand="xl"
-          bg="black"
-          variant="dark"
-        >
-          <Container>
-            <Navbar.Brand className="pic">
-              <img src="logo.png" alt="" width="80%" />
-            </Navbar.Brand>
-            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-            <Navbar.Collapse id="responsive-navbar-nav">
-         
-                <Nav className="ms-auto nav_in_responsive ">
-                  <Nav.Link className="hzn" >
-                     <Link to="/" className="link_text" >Home</Link>
-                  </Nav.Link>
 
-                  {/* <Nav.Link className="hzn">
+
+            <div className="maina">
+                <Navbar
+                    className="Headera"
+                    collapseOnSelect
+                    expand="xl"
+                    bg="black"
+                    variant="dark"
+                >
+                    <Container>
+                        <Navbar.Brand className="pic">
+                            <img src="logo.png" alt="" width="80%" />
+                        </Navbar.Brand>
+                        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                        <Navbar.Collapse id="responsive-navbar-nav">
+
+                            <Nav className="ms-auto nav_in_responsive ">
+                                <Nav.Link className="hzn" >
+                                    <Link to="/" className="link_text" >Home</Link>
+                                </Nav.Link>
+
+                                {/* <Nav.Link className="hzn">
                     <Link to="/About_main" className="link_text" >About</Link>
                   </Nav.Link> */}
 
-                  <Nav.Link className="hzn" href="#collection">
-                    <Link to="/Collection_main" className="link_text" >Collection</Link>
-                  </Nav.Link>
-                  <Nav.Link className="hzn" href="#benefits">
-                     <Link to="/Benefits_main" className="link_text" >Benefits</Link>
-                  </Nav.Link>
-                  <Nav.Link className="hzn" href="#roadmap">
-                     <Link to="/Road_main" className="link_text" >Roadmap</Link>
-                  </Nav.Link>
+                                <Nav.Link className="hzn" href="#collection">
+                                    <Link to="/Collection_main" className="link_text" >Collection</Link>
+                                </Nav.Link>
+                                <Nav.Link className="hzn" href="#benefits">
+                                    <Link to="/Benefits_main" className="link_text" >Benefits</Link>
+                                </Nav.Link>
+                                <Nav.Link className="hzn" href="#roadmap">
+                                    <Link to="/Road_main" className="link_text" >Roadmap</Link>
+                                </Nav.Link>
 
-                  <Link to="/Mint_main" className="link_text" ><button className="btn btna_navbar_here">Mint</button></Link>
-                  <Link to="/Mint_main" className="link_text" ><button className="btn btna_navbar_here">{btnTxt}</button></Link>
-                    
-                  
-                </Nav>
-          
-            </Navbar.Collapse>
-          </Container>
-        </Navbar>
-      </div>
-    </div>
-  );
+                                <Link to="/Mint_main" className="link_text " ><button className="btn btna_navbar_here">Mint</button></Link>
+                                {/* <Link to="/Mint_main" className="link_text" ><button className="btn btna_navbar_here">{btnTxt}</button></Link> */}
+                                {/* <select name="" id="">
+                                    <option value="137">PoliGon</option>
+                                    <option value="56">BSC</option>
+                                </select> */}
+                                <select class="form-select select_main ms-4" aria-label="Default select example" ref={selectoption}>
+                                    <option selected  disabled hidden>Select Blockchain</option>
+                                    <option value="56">BSC</option>
+                                    <option value="137">Polygon</option>
+                                  
+                                </select>
+
+
+                            </Nav>
+
+                        </Navbar.Collapse>
+                    </Container>
+                </Navbar>
+            </div>
+        </div>
+    );
 }

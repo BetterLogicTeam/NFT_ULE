@@ -36,15 +36,20 @@ import ModelOpen from "./Components/Mint/ModelOpen";
 
 function App() {
 const [modalShow, setModalShow] = useState(false);
+const [chainid, setchainid] = useState();
+
+
 function value(myvalue){
   console.log('my value is',myvalue)
 
 }
 
+console.log("chainid",chainid);
+
   return (
     <div className="App">
       <BrowserRouter>
-        <Header/>
+        <Header setchainid={setchainid} />
         <ModelOpen setModalShow={setModalShow} modalShow={modalShow} value={value} />
         <ToastContainer />
         <Routes>
