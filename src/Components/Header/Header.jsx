@@ -104,8 +104,8 @@ export default function Header() {
                                         Mint
                                     </button>
                                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                        <li><a class="dropdown-item" href="/Minting_With_BSC">BCS</a></li>
-                                        <li><a class="dropdown-item" href="/Main_polygon">Polygon</a></li>
+                                        <li><a class="dropdown-item" > <Link to="Minting_With_BSC" className="text-d" > <img src="bsc3.png"  alt="" /> BCS</Link></a></li>
+                                        <li><a class="dropdown-item" ><Link to="/Main_polygon" className="text-d"> <img src="polygon.png"  alt="" />  Polygon</Link></a></li>
 
                                     </ul>
                                 </div>

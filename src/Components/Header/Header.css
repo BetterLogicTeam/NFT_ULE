@@ -22,12 +22,24 @@
     font-size: 1.3rem !important;
 }
 .dropdown-menu{
-    background-color:rgb(251,197,11) !important ;
+    background-color: rgb(18, 8, 61)!important;
+    color: rgb(251,197,11);
 
 }
 .maina img{
     width: 7rem;
     /* margin-right: 2rem !important; */
+}
+
+.text-d{
+    text-decoration: none;
+    color: rgb(251,197,11);
+    font-size: 1.2rem !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
 }
 
 .hzn{
@@ -107,4 +119,9 @@
 .link_text{
     text-decoration: none;
 
+}
+
+
+.text-d img{
+    width: 2.5rem;
 }
