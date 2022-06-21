@@ -138,9 +138,8 @@
 
 .single-live-auction {
   background-color: #060826;
-  /* border-radius: 15px; */
-  /* padding: 20px 20px; */
- width: 400px;
+
+ width: 100%;
 
   margin-bottom: 10px;
   position: relative;
@@ -157,7 +156,7 @@
 }
 .home-2 img {
   border-radius: 20px 20px 0 0;
- width: 400px;
+ width: 100% !important;
 }
 
 .collection-text {
@@ -205,3 +204,23 @@ a, a:hover, a:focus, a:active {
     margin: 0 5px;
     color: white;
 }  
+
+
+@media screen and (max-width:600px) {
+
+  .single-live-auction {
+  background-color: #060826;
+  /* border-radius: 15px; */
+  /* padding: 20px 20px; */
+ width: 100% !important;
+
+  margin-bottom: 10px;
+  position: relative;
+}
+.home-2 img {
+  width: 100% !important;
+}
+.p_text {
+  font-size: 38px;
+}
+}

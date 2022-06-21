@@ -31,6 +31,24 @@
     .aaa img{
         margin-left: 7.2rem !important;
     }
+    .row_width{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .new_class_ul{
+        display: flex;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+    .foother_center{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column !important;
+        margin-left: -80%;
+    }
 }
 
 @media (min-width:480px) and (max-width:768px) {
@@ -45,6 +63,14 @@
     .width_4 h3{
         margin-left: 17rem !important;
     }
+    .foother_center{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column !important;
+        margin-left: -45%;
+    }
+
 
     .social_icon i{
         align-items: center !important;

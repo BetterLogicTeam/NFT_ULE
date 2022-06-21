@@ -35,8 +35,8 @@ function Footer() {
                 Useful Link
               </h3>
               <div class="row_width">
-                <div class="width_50 ftr">
-                  <ul class="ft_color flex flex-col space-y-1">
+                <div class="width_50 ftr  foother_center">
+                  <ul class="ft_color flex flex-col space-y-1 new_class_ul">
                     <li>
                       
                     <Link to="/" className="link_text" >
@@ -48,14 +48,7 @@ function Footer() {
                       </a>
                       </Link>
                     </li>
-                    {/* <li>
-                      <a
-                        href="javascript:void(0)"
-                        class="hover:text-accent dark:hover:text-white"
-                      >
-                        About
-                      </a>
-                    </li> */}
+                   
                     <li>
                     <Link to="/Collection_main" className="link_text" >
                       <a
@@ -76,11 +69,6 @@ function Footer() {
                       </a>
                       </Link>
                     </li>
-                  </ul>
-                </div>
-                <div class="width_50 ftr2">
-                  <ul class="ft_color flex flex-col space-y-1">
-                  
                     <li>
                     <Link to="/Road_main" className="link_text" >
                       <a
@@ -103,6 +91,7 @@ function Footer() {
                     </li>
                   </ul>
                 </div>
+                
               </div>
             </div>
             <div class="width_4 icn">
