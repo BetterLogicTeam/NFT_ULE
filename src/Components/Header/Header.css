@@ -18,6 +18,12 @@
 .select_main{
     background-color:rgb(251,197,11) !important ;
     height: 2.7rem;
+    color: black !important;
+    font-size: 1.3rem !important;
+}
+.dropdown-menu{
+    background-color:rgb(251,197,11) !important ;
+
 }
 .maina img{
     width: 7rem;

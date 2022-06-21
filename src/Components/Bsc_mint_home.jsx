@@ -23,7 +23,7 @@ export default function Bsc_mint_home() {
                     <div className="main_div_btn_here">
 
                         <div className="btn-area1 mt-5 ">
-                            <Link to="/minting_maine_here"> <a class="btn btn_main_mint fs-2" >
+                            <Link to="/Minting_With_BSC"> <a class="btn btn_main_mint fs-2" >
                                 BSC
                             </a></Link>
                         </div>

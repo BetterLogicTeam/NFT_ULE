@@ -11,50 +11,50 @@ export default function Header() {
     let [btnTxt, setBtTxt] = useState("Connect")
     const selectoption = useRef();
 
-   
-  let NetId
-  const getAccount = async () => {
-    const web3 = window.web3;
-    window.web3 = new Web3(window.ethereum);
 
-    await window.ethereum.enable();
+    let NetId
+    const getAccount = async () => {
+        const web3 = window.web3;
+        window.web3 = new Web3(window.ethereum);
 
-    await window.web3.eth.getChainId((err, netId) => {
+        await window.ethereum.enable();
 
-      console.log("netid", netId);
-      NetId = netId
+        await window.web3.eth.getChainId((err, netId) => {
 
+            console.log("netid", netId);
+            NetId = netId
+
+        }
+        )
+        let acc
+
+        if (NetId == 56) {
+            acc = await loadWeb3()
+        } else {
+            acc = await loadWeb2()
+        }
+
+
+        setBtTxt(acc)
+        console.log("ACC=", acc)
+        if (acc == "No Wallet") {
+            setBtTxt("No Wallet")
+        }
+        else if (acc == "Wrong Network") {
+            setBtTxt("Wrong Network")
+        } else {
+            let myAcc = acc?.substring(0, 4) + "..." + acc?.substring(acc?.length - 4);
+            setBtTxt(myAcc);
+
+        }
     }
-    )
-    let acc
-
-    if (NetId == 56) {
-      acc = await loadWeb3()
-    } else {
-      acc = await loadWeb2()
-    }
-
-
-    setBtTxt(acc)
-    console.log("ACC=", acc)
-    if (acc == "No Wallet") {
-      setBtTxt("No Wallet")
-    }
-    else if (acc == "Wrong Network") {
-      setBtTxt("Wrong Network")
-    } else {
-      let myAcc = acc?.substring(0, 4) + "..." + acc?.substring(acc?.length - 4);
-      setBtTxt(myAcc);
-
-    }
-  }
 
 
 
 
     useEffect(() => {
         setInterval(() => {
-           
+
             getAccount()
 
         }, 1000);
@@ -62,7 +62,7 @@ export default function Header() {
     return (
         <div>
 
-           
+
 
 
             <div className="maina">
@@ -85,7 +85,7 @@ export default function Header() {
                                     <Link to="/" className="link_text" >Home</Link>
                                 </Nav.Link>
 
-                             
+
 
                                 <Nav.Link className="hzn" href="#collection">
                                     <Link to="/Collection_main" className="link_text" >Collection</Link>
@@ -97,17 +97,24 @@ export default function Header() {
                                     <Link to="/Road_main" className="link_text" >Roadmap</Link>
                                 </Nav.Link>
 
-                                <Link to="/Mint_main" className="link_text " ><button className="btn btna_navbar_here">Mint</button></Link>
-                                <button className="btn btna_navbar_here">{btnTxt}</button>
-
                                
-                                {/* <select class="form-select select_main ms-4 fs-5" aria-label="Default select example" onChange={(e)=>setchainid(e.target.value)}>
-                                    <option selected  disabled hidden>BSC</option>
-                                    <option value="true">Polygon</option>
-                    
 
-                                  
-                                </select> */}
+                                <div class="dropdown ms-4">
+                                    <button class="btn btn-secondary dropdown-toggle select_main" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Mint
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item" href="/Minting_With_BSC">BCS</a></li>
+                                        <li><a class="dropdown-item" href="/Main_polygon">Polygon</a></li>
+
+                                    </ul>
+                                </div>
+
+
+                                <button className="btn btna_navbar_here ms-4">{btnTxt}</button>
+
+
+
 
 
                             </Nav>

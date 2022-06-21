@@ -64,7 +64,7 @@ function value(myvalue){
           <Route exact path="/Mint_main" element={<BSC_Minting  />} />
           <Route exact path="/Terms_main" element={<Terms />} />
           <Route exact path="/Privacy_Policy" element={<Privacy_Policy />} />
-          <Route exact path="/minting_maine_here" element={<Mint_main />} />
+          <Route exact path="/Minting_With_BSC" element={<Mint_main />} />
           <Route exact path="/Main_polygon" element={<Main_polygon />} />
           <Route exact path="/Mint" element={<Mint />} />
 

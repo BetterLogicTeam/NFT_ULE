@@ -80,7 +80,7 @@ let NetId
     let [mintPriceBUSD, setMintPriceBUSD] = useState(0);
     let [mintPriceWire, setmintPriceWire] = useState(0);
     let [btnOne, setButtonOne] = useState("Mint With BNB");
-    let [btnTwo, setButtonTwo] = useState("Mint With WHE");
+    let [btnTwo, setButtonTwo] = useState("Mint With ULE");
     let [btnThree, setButtonThree] = useState("Mint With Busd")
     const [inputdatahere, setinputdatahere] = useState(" ")
     const [showModal, setShowModal] = useState(false)
@@ -849,7 +849,7 @@ let NetId
                                                         <a class="btn btn-box" onClick={() => Sponser2()}>
                                                             {btnTwo}
                                                         </a>
-                                                        <p className="fs-4 " style={{marginLeft:"1rem"}}>Price : {mintPriceWire} WHE</p>
+                                                        <p className="fs-4 " style={{marginLeft:"1rem"}}>Price : {mintPriceWire} ULE</p>
                                                     </div>
                                                     <div className="btn-area1 mt-5">
                                                         <a class="btn btn-box" onClick={() => Sponser3()}>
