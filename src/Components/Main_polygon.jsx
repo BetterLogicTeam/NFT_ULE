@@ -1,24 +1,10 @@
-import React, { useState } from 'react'
-import Footer from "./Footer/Footer";
-import Front2 from "./Front2/Front2";
-import Front3 from "./Front3/Front3";
-import Front4 from "./Front4/Front4";
-import Mint from "./Mint/Mint";
-import Mint_polygon from './Mint_Polygon/Mint_polygon';
+import React from 'react'
+import Mint_polygon from './Mint_Polygon/Mint_polygon'
 
-export default function Mint_main({chainid}) {
-
-  // const [chainid_id, setchainid_id] = useState(chainid)
-
-  let chainid_id=chainid
-
-  console.log("chainid_id",chainid_id);
- 
-
-
+export default function Main_polygon() {
   return (
     <div>
-        <div class="breadcrumb-area" >
+         <div class="breadcrumb-area" >
           <div className='second_img'>
         <div class="container h-100">
             <div class="row h-100 align-items-center justify-content-center">
@@ -36,9 +22,9 @@ export default function Mint_main({chainid}) {
             </div>
         </div>
     </div>
-    <Mint />
-   
-      
+
+    <Mint_polygon/>
+
     </div>
   )
 }

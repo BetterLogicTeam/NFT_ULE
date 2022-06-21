@@ -17,6 +17,7 @@
 }
 .select_main{
     background-color:rgb(251,197,11) !important ;
+    height: 2.7rem;
 }
 .maina img{
     width: 7rem;
@@ -31,7 +32,7 @@
     padding: 3px 15px 5px 15px !important;
     /* border: 2px solid rgb(253,86,42) !important; */
     background-color: rgb(251,197,11) !important;
-    border-radius: 2rem !important;
+    /* border-radius: 2rem !important; */
     color: black !important;
     font-size: 1.3rem !important;
     margin-left: 1rem;
@@ -99,4 +100,5 @@
 
 .link_text{
     text-decoration: none;
+
 }

@@ -32,11 +32,14 @@ import 'react-toastify/dist/ReactToastify.css';
 import Terms from "./Components/Terms/Terms";
 import Privacy_Policy from "./Components/Privacy_Policy/Privacy_Policy";
 import ModelOpen from "./Components/Mint/ModelOpen";
+import BSC_Minting from "./Components/BSC_Minting";
+import Main_polygon from "./Components/Main_polygon";
+import Mint_polygon from "./Components/Mint_Polygon/Mint_polygon";
 
 
 function App() {
 const [modalShow, setModalShow] = useState(false);
-const [chainid, setchainid] = useState();
+const [chainid, setchainid] = useState(false);
 
 
 function value(myvalue){
@@ -44,26 +47,37 @@ function value(myvalue){
 
 }
 
-console.log("chainid",chainid);
+
 
   return (
     <div className="App">
       <BrowserRouter>
-        <Header setchainid={setchainid} />
+        <Header  setchainid={setchainid} />
         <ModelOpen setModalShow={setModalShow} modalShow={modalShow} value={value} />
         <ToastContainer />
         <Routes>
-          <Route exact path="/" element={<Index_main />} />
+          <Route exact path="/" element={<Index_main chainid={chainid} />} />
           {/* <Route exact path="/About_main" element={<About_main />} />   */}
           <Route exact path="/Collection_main" element={<Collection_main />} />
           <Route exact path="/Benefits_main" element={<Benefits_main />} />
           <Route exact path="/Road_main" element={<Road_main />} />
-          <Route exact path="/Mint_main" element={<Mint_main setModalShow={setModalShow}   />} />
+          <Route exact path="/Mint_main" element={<BSC_Minting  />} />
           <Route exact path="/Terms_main" element={<Terms />} />
           <Route exact path="/Privacy_Policy" element={<Privacy_Policy />} />
+          <Route exact path="/minting_maine_here" element={<Mint_main />} />
+          <Route exact path="/Main_polygon" element={<Main_polygon />} />
+          <Route exact path="/Mint" element={<Mint />} />
+
+          <Route exact path="/Mint_polygon" element={<Mint_polygon />} />
+
+
+
+          {/* <Route exact path="/Privacy_Policy" element={<Mint chainid={chainid} />} /> */}
+
 
 
         </Routes>
+        {/* <Mint   chainid={chainid} /> */}
         <Footer />
       </BrowserRouter>
     </div>
