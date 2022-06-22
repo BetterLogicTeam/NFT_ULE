@@ -401,7 +401,7 @@ let NetId
                                             // toast.success("Success", postapi.data.data)
 
 
-                                            setButtonTwo("Mint With WHE")
+                                            setButtonTwo("Mint With ULE")
                                             setinputdatahere(" ")
 
 
@@ -419,7 +419,7 @@ let NetId
                                             //     from: acc,
                                             // })
                                             // toast.success("Transaction Succefful")
-                                            // setButtonTwo("Mint With WHE")
+                                            // setButtonTwo("Mint With ULE")
                                             // // console.log("hash", hash.transactionHash);
                                             // hash = hash.transactionHash
                                             // let postapi = await axios.post('https://whenftapi.herokuapp.com/buynfttoken', {
@@ -438,24 +438,24 @@ let NetId
 
                                         } else {
                                             toast.error("Out Of Balance")
-                                            setButtonTwo("Mint With WHE")
+                                            setButtonTwo("Mint With ULE")
 
                                         }
 
                                     } else {
                                         toast.error("No of Minting is Greater than maximum limit Per Transaction")
-                                        setButtonTwo("Mint With WHE")
+                                        setButtonTwo("Mint With ULE")
 
                                     }
                                 } else {
                                     toast.error("Paused is False")
-                                    setButtonTwo("Mint With WHE")
+                                    setButtonTwo("Mint With ULE")
 
                                 }
 
                             } else {
                                 toast.error("Max Supply is Greater than total Supply")
-                                setButtonTwo("Mint With WHE")
+                                setButtonTwo("Mint With ULE")
 
                             }
 
@@ -473,7 +473,7 @@ let NetId
                     } catch (e) {
                         console.log("Error while minting ", e)
                         toast.error("Transaction failed")
-                        setButtonTwo("Mint With WHE")
+                        setButtonTwo("Mint With ULE")
 
                     }
                 } else {

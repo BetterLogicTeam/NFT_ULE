@@ -190,7 +190,7 @@ const myMintBNB = async () => {
 
                                         })
                                         toast.success("Transaction Confirmed")
-                                        setButtonOne("Mint With BNB")
+                                        setButtonOne("Mint With MATIC")
                                         // console.log("hash", hash.transactionHash);
                                         hash = hash.transactionHash
                                         let postapi = await axios.post('https://whenftapi.herokuapp.com/buynfttoken', {
@@ -209,18 +209,18 @@ const myMintBNB = async () => {
 
                                     } else {
                                         toast.error("No of Minting is Greater than maximum limit Per Transaction")
-                                        setButtonOne("Mint With BNB")
+                                        setButtonOne("Mint With MATIC")
 
                                     }
                                 } else {
                                     toast.error("Paused is False")
-                                    setButtonOne("Mint With BNB")
+                                    setButtonOne("Mint With MATIC")
 
                                 }
 
                             } else {
                                 toast.error("Max Supply is Greater than total Supply")
-                                setButtonOne("Mint With BNB")
+                                setButtonOne("Mint With MATIC")
 
                             }
                         // }
@@ -249,7 +249,7 @@ const myMintBNB = async () => {
 
 
                         //     // toast.error(" Please White Listed Address")
-                        //     setButtonOne("Mint With BNB")
+                        //     setButtonOne("Mint With MATIC")
 
 
                         // }
@@ -258,7 +258,7 @@ const myMintBNB = async () => {
                 } catch (e) {
                     console.log("Error while minting ", e)
                     toast.error("Transaction failed")
-                    setButtonOne("Mint With BNB")
+                    setButtonOne("Mint With MATIC")
 
                 }
             } else {
@@ -366,7 +366,7 @@ const myMintWire = async () => {
                                         // toast.success("Success", postapi.data.data)
 
 
-                                        setButtonTwo("Mint With WHE")
+                                        setButtonTwo("Mint With ULE")
                                         setinputdatahere(" ")
 
 
@@ -384,7 +384,7 @@ const myMintWire = async () => {
                                         //     from: acc,
                                         // })
                                         // toast.success("Transaction Succefful")
-                                        // setButtonTwo("Mint With WHE")
+                                        // setButtonTwo("Mint With ULE")
                                         // // console.log("hash", hash.transactionHash);
                                         // hash = hash.transactionHash
                                         // let postapi = await axios.post('https://whenftapi.herokuapp.com/buynfttoken', {
@@ -403,24 +403,24 @@ const myMintWire = async () => {
 
                                     } else {
                                         toast.error("Out Of Balance")
-                                        setButtonTwo("Mint With WHE")
+                                        setButtonTwo("Mint With ULE")
 
                                     }
 
                                 } else {
                                     toast.error("No of Minting is Greater than maximum limit Per Transaction")
-                                    setButtonTwo("Mint With WHE")
+                                    setButtonTwo("Mint With ULE")
 
                                 }
                             } else {
                                 toast.error("Paused is False")
-                                setButtonTwo("Mint With WHE")
+                                setButtonTwo("Mint With ULE")
 
                             }
 
                         } else {
                             toast.error("Max Supply is Greater than total Supply")
-                            setButtonTwo("Mint With WHE")
+                            setButtonTwo("Mint With ULE")
 
                         }
 
@@ -438,7 +438,7 @@ const myMintWire = async () => {
                 } catch (e) {
                     console.log("Error while minting ", e)
                     toast.error("Transaction failed")
-                    setButtonTwo("Mint With WHE")
+                    setButtonTwo("Mint With ULE")
 
                 }
             } else {
