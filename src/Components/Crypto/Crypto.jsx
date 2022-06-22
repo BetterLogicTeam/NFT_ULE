@@ -11,7 +11,7 @@ export default function Crypto() {
   const fetchData = async() => {
     try{
       let getdata= await axios.get("https://api.binance.com/api/v3/ticker/price?symbol=BNBUSDT")
-      console.log("data_chack_here",getdata.data.price);
+      // console.log("data_chack_here",getdata.data.price);
       
       
       setUsers(getdata.data.price)
@@ -25,7 +25,7 @@ export default function Crypto() {
 
     try{
       let getdata= await axios.get("https://ule-nft-api.herokuapp.com/ulematicliverate?id=1")
-      console.log("secondapi",getdata.data.data);
+      // console.log("secondapi",getdata.data.data);
 
       setdataapi(getdata.data.data).toFixed(4)
     }catch(e){

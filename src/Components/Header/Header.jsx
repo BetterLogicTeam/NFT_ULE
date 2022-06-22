@@ -21,7 +21,7 @@ export default function Header() {
 
         await window.web3.eth.getChainId((err, netId) => {
 
-            console.log("netid", netId);
+            // console.log("netid", netId);
             NetId = netId
 
         }
@@ -36,7 +36,7 @@ export default function Header() {
 
 
         setBtTxt(acc)
-        console.log("ACC=", acc)
+        // console.log("ACC=", acc)
         if (acc == "No Wallet") {
             setBtTxt("No Wallet")
         }
