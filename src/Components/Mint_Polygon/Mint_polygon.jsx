@@ -1,5 +1,6 @@
 
 import React, { useEffect, useRef, useState } from "react";
+import './Mint_polygon.css'
 // import "./Mint.css";
 import { HiChevronDoubleRight } from "react-icons/hi";
 import { HiChevronDoubleLeft } from "react-icons/hi";
@@ -779,7 +780,7 @@ useEffect(() => {
                 </Modal.Body>
                 {/* / */}
             </Modal>
-            <div className="mint">
+            <div className="mint polyy">
                 {/* <ModelOpen showModal={showModal} setShowModal={setShowModal} subMitFunction={subMitFunction} /> */}
                 {/* <button variant="primary" onClick={() => setModalShow(true)}>
                     Launch vertically centered modal
@@ -796,7 +797,7 @@ useEffect(() => {
                             <div className="row">
                                 <div className="col-md-5">
                                     <div class="mint-image welcome-thumb mb-50 item">
-                                        <img src="nft_img.jpg" alt="" />
+                                        <img src="nft_img copy.jpg" alt="" />
                                     </div>
                                 </div>
                                 <div className="col-md-7">

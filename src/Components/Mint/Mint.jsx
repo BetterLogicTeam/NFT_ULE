@@ -791,7 +791,7 @@ function Mint({ chainid_id }) {
                 </Modal.Body>
                 {/* / */}
             </Modal>
-            <div className="mint">
+            <div className="mint2">
 
 
 
@@ -805,7 +805,7 @@ function Mint({ chainid_id }) {
                             <div className="row">
                                 <div className="col-md-5">
                                     <div class="mint-image welcome-thumb mb-50 item">
-                                        <img src="nft_img.jpg" alt="" />
+                                        <img src="nft_img copy.jpg" alt="" />
                                     </div>
                                 </div>
                                 <div className="col-md-7">

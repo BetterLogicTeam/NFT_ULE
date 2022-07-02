@@ -12,6 +12,7 @@ import Front4 from "./Front4/Front4";
 import Header from "./Header/Header";
 import Mint from "./Mint/Mint";
 import Mint_polygon from "./Mint_Polygon/Mint_polygon";
+import Mint_2 from "./Mint_2/Mint_2";
 // import Explore from "./Explore/Explore";
 import Road from "./Road/Road";
 import Slide from "./Slide/Slide";
@@ -26,9 +27,10 @@ export default function Index_main({chainid}) {
       <Front4 />
      <Bsc_mint_home/>
      
-      <Crypto />
+      {/* <Crypto /> */}
       {/* <Explore /> */}
-      <Road />
+      {/* <Road /> */}
+      <Mint_2 />
       <Create_sell_nft />
       {/* <Slide /> */}
     </div>

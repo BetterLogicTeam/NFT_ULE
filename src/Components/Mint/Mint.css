@@ -1,3 +1,17 @@
+.mint2{
+    background-image: url("../../assets/bg4.png");
+    background-size: cover;
+    background-color: black;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto !important;
+    /* color: white; */
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+
 .mint{
     background-image: url("../../assets/bg4.png");
     background-size: cover;
@@ -17,9 +31,9 @@
     max-width: 172px;
     border-radius: 8px;
     border-color: #fbc50b;
-    color: #000;
+    background-color: #000;
     border: 4px solid #fbc50b;
-    background-color: #fff;
+    color: #fff;
     font-size: 22px;
     height: 54px;
     text-align: center;

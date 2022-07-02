@@ -30,7 +30,7 @@ function Footer() {
                 blockchain technology.
               </p>
             </div>
-            <div class="width_4">
+            {/* <div class="width_4">
               <h3 class="font-display text-jacarta-700 mb-6 text-sm dark:text-white">
                 Useful Link
               </h3>
@@ -38,63 +38,46 @@ function Footer() {
                 <div class="width_50 ftr  foother_center">
                   <ul class="ft_color flex flex-col space-y-1 new_class_ul">
                     <li>
-                      
-                    <Link to="/" className="link_text" >
-                      <a
-                       
-                        class="hover:text-accent dark:hover:text-white"
-                      >
-                        Home
-                      </a>
+                      <Link to="/" className="link_text">
+                        <a class="hover:text-accent dark:hover:text-white">
+                          Home
+                        </a>
                       </Link>
                     </li>
-                   
+
                     <li>
-                    <Link to="/Collection_main" className="link_text" >
-                      <a
-                      
-                        class="hover:text-accent dark:hover:text-white"
-                      >
-                        Collection
-                      </a>
+                      <Link to="/Collection_main" className="link_text">
+                        <a class="hover:text-accent dark:hover:text-white">
+                          Collection
+                        </a>
                       </Link>
                     </li>
                     <li>
-                    <Link to="/Benefits_main" className="link_text" >
-                      <a
-                     
-                        class="hover:text-accent dark:hover:text-white"
-                      >
-                        Benifits
-                      </a>
+                      <Link to="/Benefits_main" className="link_text">
+                        <a class="hover:text-accent dark:hover:text-white">
+                          Benifits
+                        </a>
                       </Link>
                     </li>
                     <li>
-                    <Link to="/Road_main" className="link_text" >
-                      <a
-                      
-                        class="hover:text-accent dark:hover:text-white"
-                      >
-                        Roadmap
-                      </a>
+                      <Link to="/Road_main" className="link_text">
+                        <a class="hover:text-accent dark:hover:text-white">
+                          Roadmap
+                        </a>
                       </Link>
                     </li>
                     <li>
-                    <Link to="/Mint_main" className="link_text" >
-                      <a
-                
-                        class="hover:text-accent dark:hover:text-white"
-                      >
-                        Mint
-                      </a>
+                      <Link to="/Mint_main" className="link_text">
+                        <a class="hover:text-accent dark:hover:text-white">
+                          Mint
+                        </a>
                       </Link>
                     </li>
                   </ul>
                 </div>
-                
               </div>
-            </div>
-            <div class="width_4 icn">
+            </div> */}
+            {/* <div class="width_4 icn">
               <h3 class="font-display text-jacarta-700 mb-6 text-sm dark:text-white">
                 Social Link
               </h3>
@@ -107,14 +90,17 @@ function Footer() {
                   <i class="fa fa-paper-plane"></i>
                 </a>
               </div>
-            </div>
+            </div> */}
           </div>
 
           <div class="flex flex-col end items-center justify-between space-y-2 py-8 sm:flex-row sm:space-y-0">
-            <span class="dark:text-jacarta-400 text-sm" style={{color:"white"}}>
+            <span
+              class="dark:text-jacarta-400 text-sm"
+              style={{ color: "white" }}
+            >
               © 2022 nft.ule.community
             </span>
-            <ul class="dark:text-jacarta-400 flex flex-wrap space-x-4 text-sm">
+            {/* <ul class="dark:text-jacarta-400 flex flex-wrap space-x-4 text-sm">
               <li>
                 <a
                   href="javascript:void(0)"
@@ -131,7 +117,7 @@ function Footer() {
                   Privacy policy
                 </a>
               </li>
-            </ul>
+            </ul> */}
           </div>
         </div>
       </footer>

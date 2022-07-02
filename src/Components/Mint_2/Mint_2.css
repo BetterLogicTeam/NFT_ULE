@@ -1,0 +1,18 @@
+.mint_2_main{
+    background-color: black;
+}
+
+.minnn{
+    padding-top: 18px !important;
+}
+
+.bsc_logo {
+    display: flex;
+    justify-content: center;
+}
+.bsc_logo a{
+    padding: 0 18px;
+}
+.bsc_logo a img{
+    height: 100px;
+}
