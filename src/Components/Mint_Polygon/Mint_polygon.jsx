@@ -810,6 +810,8 @@ useEffect(() => {
                                                 </div> */}
                                                 
                                                 <div className="top_div_here">
+                    <input className="bcs" type="text" name="number" value="1"></input>
+
                                                     <div className="btn-area1 mt-5">
                                                         <a class="btn btn-box "  onClick={() => Sponser()}>
                                                             <span className="">{btnOne}</span>
