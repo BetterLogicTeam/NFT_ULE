@@ -72,12 +72,8 @@ function value(myvalue){
 
 
 
-          {/* <Route exact path="/Privacy_Policy" element={<Mint chainid={chainid} />} /> */}
-
-
-
         </Routes>
-        {/* <Mint   chainid={chainid} /> */}
+       
         <Footer />
       </BrowserRouter>
     </div>
