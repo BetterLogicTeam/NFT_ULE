@@ -12,6 +12,21 @@
     padding-bottom: 90px;
 }
 
+
+.bcs{
+    max-width: 172px;
+    border-radius: 8px;
+    border-color: #fbc50b;
+    color: #000;
+    border: 4px solid #fbc50b;
+    background-color: #fff;
+    font-size: 22px;
+    height: 54px;
+    text-align: center;
+    margin-left: -22rem !important;
+    margin-bottom: 1rem;
+}
+
 .mint h1{
     color: rgb(251,197,11) !important;
 }
@@ -63,6 +78,14 @@
         width: 9rem;
     }
 
+    .bcs{
+        margin-left: -8rem !important;
+        max-width: 122px;
+        font-size: 20px;
+        height: 34px;
+        margin-bottom: 0px;
+    }
+
     .top_div_here p{
         font-size: 15px !important;
         color: black !important;
@@ -86,6 +109,13 @@
         font-weight: 400 !important;
         margin-left: -10rem !important;
         margin-top: -4rem !important;
+    }
+
+    .bcs{
+        margin-left: -12rem !important;
+        font-size: 20px;
+        height: 44px;
+        margin-bottom: 0px;
     }
 
     .top_div_here p{

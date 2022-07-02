@@ -798,7 +798,7 @@ function Mint({ chainid_id }) {
                 <div className="container">
 
                     <h1>MINT WITH BSC</h1>
-
+                       
 
                     <div className="row mt-5">
                         <div className="">
@@ -812,6 +812,7 @@ function Mint({ chainid_id }) {
                                     <div className="mint-content">
                                         <div className="mint-item">
                                             <div className="quantity">
+
                                                 {/* <div className="">
                                                     <button className="btn count-form" type="text" value={value} onChange={(e) => setValue(e.target.value)} id="qtyBox" >1
                                                         </button>
@@ -819,6 +820,8 @@ function Mint({ chainid_id }) {
                                                 </div> */}
 
                                                 <div className="top_div_here">
+                    <input className="bcs" type="text" name="number" value="1"></input>
+
                                                     <div className="btn-area1 mt-5">
                                                         <a class="btn btn-box " onClick={() => Sponser()}>
                                                             <span className="">{btnOne}</span>

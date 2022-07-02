@@ -31,6 +31,11 @@
     line-height: 4rem;
 }
 
+.two:hover{
+  box-shadow: 0 0 30px -1px rgb(252 204 41) !important;
+    transition: 0.3s !important;
+}
+
 .spec2 p{
     font-size: 1.5rem !important;
 }
@@ -39,6 +44,15 @@
     /* font-size: 4rem !important; */
     color: rgb(251,197,11) !important;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+.wallet-content-text h1{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  padding-top: 11px;
+    margin-bottom: 1rem;
+    min-height: 148px;
+    border-bottom: 1px solid #faf8f18f;
 }
 
 .spec2 h5{
@@ -229,4 +243,8 @@
 
 .two:hover{
   box-shadow: 5px 5px 5px 2px rgb(251,197,11);
+}
+
+.single-wallet-area{
+  border-radius: 12px !important;
 }

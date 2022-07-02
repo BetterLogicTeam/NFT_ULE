@@ -8,7 +8,7 @@ export default function Front2() {
         <div class="container">
           <div class="row benefits">
             <div class="col-12 text-center">
-              <h2 class="heading-title">BENEFITS OF WHE CLUB NFTs</h2>
+              <h1 class="heading-title">BENEFITS OF WHE CLUB NFTs</h1>
               <p className="kami">
               Holders of WHE NFTs will get exclusive membership to WHE club a private members only club in the metaverse
               </p>
@@ -23,9 +23,11 @@ export default function Front2() {
                         </div> --> */}
 
                 <div class="wallet-content-text">
-                  <h4>
+                  {/* <h4>
                     <a href="#">Own the full commercial rights</a>
-                  </h4>
+                  </h4> */}
+
+                  <h1>Own the full commercial rights</h1>
                   <p>
                     NFTs prove ownership of a unique digital asset like art,
                     music, collectibles, videos, or anything else with
@@ -44,11 +46,12 @@ export default function Front2() {
             <div class="col-md-6  col-lg-3 mt-5 aos-init">
               <div class="single-wallet-area two">
                 <div class="wallet-content-text div_explor">
-                  <h4>
+                  {/* <h4>
                     <a href="#">Explore the Metaverse with us</a>
-                  </h4>
+                  </h4> */}
+                  <h1>EXPLORE THE ULEnft's WITH US</h1>
                   <p>
-                    The metaverse is an online, three-dimensional universe that
+                    The ULEnft's is an online, three-dimensional universe that
                     combines multiple virtual spaces. It can be compared to a
                     future version of the internet. With metaverse, users will
                     be able to collaborate, meet, play games, and socialize in
@@ -64,11 +67,11 @@ export default function Front2() {
             <div className="col-md-6 col-lg-3 mt-5 aos-init">
               <div class="single-wallet-area two">
                 <div class="wallet-content-text div_xplor">
-                  <h4>
-                    <a href="#">Display art in high resolution</a>
-                  </h4>
+                  <h1>
+                    Display art in high resolution
+                  </h1>
                   <p class="">
-                    An NFT token has metadata encoded permanently on the
+                    An ULEnft's token has metadata encoded permanently on the
                     blockchain in a format that is "non fungible", it includes a
                     URI which points to a unique JPEG, a piece of art which is
                     the visual representation of this token, All WHE Club NFTs
@@ -82,9 +85,9 @@ export default function Front2() {
             <div class="col-md-6 col-lg-3 mt-5 aos-init">
               <div class="single-wallet-area two">
                 <div class="wallet-content-text div_display">
-                  <h4>
-                    <a href="#">Be part of a global community</a>
-                  </h4>
+                  <h1>
+                    Be part of a global community
+                  </h1>
                   <p class="">
                     We are on a journey to create the next generation of the
                     internet that will have a more decentralized architecture,
