@@ -827,19 +827,19 @@ function Mint({ chainid_id }) {
                                                             <span className="">{btnOne}</span>
                                                         </a>
 
-                                                        <p className="fs-4 ms-4">Price : {mintPriceBnb} BNB</p>
+                                                        <p className="fs-4 ms-4 text-white">Price : {mintPriceBnb} BNB</p>
                                                     </div>
                                                     <div className="btn-area1 mt-5">
                                                         <a class="btn btn-box" onClick={() => Sponser2()}>
                                                             {btnTwo}
                                                         </a>
-                                                        <p className="fs-4 " style={{ marginLeft: "1rem" }}>Price : {mintPriceWire} ULE</p>
+                                                        <p className="fs-4 text-white" style={{ marginLeft: "1rem" }}>Price : {mintPriceWire} ULE</p>
                                                     </div>
                                                     <div className="btn-area1 mt-5">
                                                         <a class="btn btn-box" onClick={() => Sponser3()}>
                                                             {btnThree}
                                                         </a>
-                                                        <p className="fs-4">Price : {mintPriceBUSD} BUSD</p>
+                                                        <p className="fs-4 text-white">Price : {mintPriceBUSD} BUSD</p>
                                                     </div>
 
 
