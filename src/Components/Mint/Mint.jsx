@@ -131,6 +131,8 @@ function Mint({ chainid_id }) {
         } else {
             try {
 
+                console.log("value_change",value);
+
                 let res = await axios.get(`https://whenftapi.herokuapp.com/checkuser?id=${inputdatahere}`)
                 // console.log("resdatahere", res.data);
                 res = res.data.data;
@@ -820,7 +822,7 @@ function Mint({ chainid_id }) {
                                                 </div> */}
 
                                                 <div className="top_div_here">
-                    <input className="bcs" type="text" name="number" value="1"></input>
+                                         <input className="bcs" type="number" name="number"  onChange={(e) => setValue(e.target.value)} value={value} ></input>
 
                                                     <div className="btn-area1 mt-5">
                                                         <a class="btn btn-box " onClick={() => Sponser()}>
