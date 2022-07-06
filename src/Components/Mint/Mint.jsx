@@ -194,7 +194,7 @@ function Mint({ chainid_id }) {
 
                                         // let BusdPrice = await nftContractOf.methods.WhitelistMintingPricein_MATIC().call();
                                         // BusdPrice = BusdPrice * value;
-                                        let hash = await nftContractOf.methods.mint_with_MATIC(value).send({
+                                        let hash = await nftContractOf.methods.mint_with_BNB(value).send({
                                             from: acc,
                                             value: totalMintingPriceBNB.toString()
 
@@ -335,7 +335,7 @@ function Mint({ chainid_id }) {
                             let ttlSupply = await nftContractOf.methods.totalSupply().call();
                             let paused = await nftContractOf.methods.paused().call();
                             let maxLimitprTransaction = await nftContractOf.methods.MaxLimitPerTransaction().call();
-                            let mintingWirePrice = await nftContractOf.methods.ValueinWHE().call()
+                            let mintingWirePrice = await nftContractOf.methods.ValueinULE().call()
                             // mintingWirePrice = mintingWirePrice[1]
                             mintingWirePrice = web3.utils.fromWei(mintingWirePrice);
                             // console.log("mintingWirePrice", mintingWirePrice);
@@ -366,7 +366,7 @@ function Mint({ chainid_id }) {
                                             let data_value = value
 
 
-                                            let hash = await nftContractOf.methods.mint_with_MMX(data_value, totalMintingPriceWire).send({
+                                            let hash = await nftContractOf.methods.mint_with_token(data_value, totalMintingPriceWire).send({
                                                 from: acc,
                                             })
                                             toast.success("Transaction Confirmed")
@@ -518,7 +518,7 @@ function Mint({ chainid_id }) {
                             let ttlSupply = await nftContractOf.methods.totalSupply().call();
                             let paused = await nftContractOf.methods.paused().call();
                             let maxLimitprTransaction = await nftContractOf.methods.MaxLimitPerTransaction().call();
-                            let mintingBusdPrice = await nftContractOf.methods.MinitngPricein_MMX().call()
+                            let mintingBusdPrice = await nftContractOf.methods.MinitngPricein_token().call()
 
                             mintingBusdPrice = web3.utils.toWei(mintingBusdPrice);
                             mintingBusdPrice = parseFloat(mintingBusdPrice)
@@ -673,13 +673,13 @@ function Mint({ chainid_id }) {
 
             const web3 = window.web3;
             let nftContractOf = new web3.eth.Contract(wireNftContractAbi, wireNftContractAddress);
-            let mintingBusdPrice = await nftContractOf.methods.MinitngPricein_MMX().call()
+            let mintingBusdPrice = await nftContractOf.methods.MinitngPricein_token().call()
             // mintingBusdPrice = web3.utils.fromWei(mintingBusdPrice);
             mintingBusdPrice = parseFloat(mintingBusdPrice)
             setMintPriceBUSD(mintingBusdPrice)
 
 
-            let mintingWirePrice = await nftContractOf.methods.ValueinWHE().call()
+            let mintingWirePrice = await nftContractOf.methods.ValueinULE().call()
             // mintingWirePrice = mintingWirePrice[1]
             mintingWirePrice = web3.utils.fromWei(mintingWirePrice)
             mintingWirePrice = parseFloat(mintingWirePrice).toFixed(1)

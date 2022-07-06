@@ -148,7 +148,7 @@ const myMintBNB = async () => {
                         let ttlSupply = await nftContractOf.methods.totalSupply().call();
                         let paused = await nftContractOf.methods.paused().call();
                         let maxLimitprTransaction = await nftContractOf.methods.MaxLimitPerTransaction().call();
-                        let mintingbnbPrice = await nftContractOf.methods.Valueinbnb().call()
+                        let mintingbnbPrice = await nftContractOf.methods.Valueinmatic().call()
                         mintingbnbPrice = web3.utils.fromWei(mintingbnbPrice);
                         // console.log("mintingWirePrice", mintingWirePrice);
                         mintingbnbPrice = parseFloat(mintingbnbPrice);
@@ -349,7 +349,7 @@ const myMintWire = async () => {
                                         let data_value = value
 
 
-                                        let hash = await nftContractOf.methods.mint_with_MMX(data_value, totalMintingPriceWire).send({
+                                        let hash = await nftContractOf.methods.mint_with_token(data_value, totalMintingPriceWire).send({
                                             from: acc,
                                         })
                                         toast.success("Transaction Confirmed")
@@ -501,7 +501,7 @@ const myMintBUSD = async () => {
                         let ttlSupply = await nftContractOf.methods.totalSupply().call();
                         let paused = await nftContractOf.methods.paused().call();
                         let maxLimitprTransaction = await nftContractOf.methods.MaxLimitPerTransaction().call();
-                        let mintingBusdPrice = await nftContractOf.methods.MinitngPricein_MMX().call()
+                        let mintingBusdPrice = await nftContractOf.methods.MinitngPricein_token().call()
 
                         mintingBusdPrice = web3.utils.toWei(mintingBusdPrice);
                         mintingBusdPrice = parseFloat(mintingBusdPrice)
@@ -656,7 +656,7 @@ const getMydata = async () => {
 
         const web3 = window.web3;
         let nftContractOf = new web3.eth.Contract(wireNftContractAbi, wireNftContractAddress);
-        let mintingBusdPrice = await nftContractOf.methods.MinitngPricein_MMX().call()
+        let mintingBusdPrice = await nftContractOf.methods.MinitngPricein_token().call()
         // mintingBusdPrice = web3.utils.fromWei(mintingBusdPrice);
         mintingBusdPrice = parseFloat(mintingBusdPrice)
         setMintPriceBUSD(mintingBusdPrice)
@@ -668,7 +668,7 @@ const getMydata = async () => {
         mintingWirePrice = parseFloat(mintingWirePrice).toFixed(1)
         setmintPriceWire(mintingWirePrice);
 
-        let mintingbnbPrice = await nftContractOf.methods.Valueinbnb().call()
+        let mintingbnbPrice = await nftContractOf.methods.Valueinmatic().call()
         // mintingbnbPrice = mintingbnbPrice[0]
 
         mintingbnbPrice = web3.utils.fromWei(mintingbnbPrice);
