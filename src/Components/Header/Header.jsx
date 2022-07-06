@@ -94,7 +94,7 @@ export default function Header() {
                         {" "}
                         <Link to="Minting_With_BSC" className="text-d">
                           {" "}
-                          <img src="bsc3.png" alt="" /> BCS
+                          <img src="bsc3.png" alt="" /> BSC
                         </Link>
                       </a>
                     </li>
