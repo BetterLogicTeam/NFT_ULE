@@ -523,7 +523,7 @@ function Mint({ chainid_id }) {
                             mintingBusdPrice = web3.utils.toWei(mintingBusdPrice);
                             mintingBusdPrice = parseFloat(mintingBusdPrice)
                             // setMintPriceBUSD(mintingBusdPrice)
-                            let totalMintingPriceBusd = value * mintingBusdPrice
+                            let totalMintingPriceBusd = value * mintingBusdPrice+0.001
                             // console.log("maxSupply", maxSupply);
                             // console.log("ttlSupply", maxLimitprTransaction);
 
