@@ -131,7 +131,7 @@ function Mint({ chainid_id }) {
         } else {
             try {
 
-                console.log("value_change",value);
+                console.log("value_change", value);
 
                 let res = await axios.get(`https://whenftapi.herokuapp.com/checkuser?id=${inputdatahere}`)
                 // console.log("resdatahere", res.data);
@@ -270,7 +270,7 @@ function Mint({ chainid_id }) {
                         toast.error("Transaction failed")
                         setButtonOne("Mint With BNB")
 
-                      }
+                    }
                 } else {
                     toast.error("User Is Not Exists")
                     setinputdatahere(" ")
@@ -329,7 +329,7 @@ function Mint({ chainid_id }) {
                             toast.error(`Maximum Limit is ${totalnft} `)
                         } else {
                             let userBusdBalance = await wireContractOf.methods.balanceOf(acc).call();
-                            console.log("userBusdBalance",userBusdBalance);
+                            console.log("userBusdBalance", userBusdBalance);
                             // userBusdBalance = web3.utils.fromWei(userBusdBalance)
                             let maxSupply = await nftContractOf.methods.maxsupply().call();
                             let ttlSupply = await nftContractOf.methods.totalSupply().call();
@@ -505,9 +505,9 @@ function Mint({ chainid_id }) {
                         let nftContractOf = new web3.eth.Contract(wireNftContractAbi, wireNftContractAddress);
                         let busdContractOf = new web3.eth.Contract(busdNftTokenAbi, busdNftTokenAddress);
                         let userBusdBalance = await busdContractOf.methods.balanceOf(acc).call();
-                        
+
                         userBusdBalance = web3.utils.fromWei(userBusdBalance)
-                        console.log("maxSupply",busdContractOf);
+                        console.log("maxSupply", busdContractOf);
                         let totalnft = await nftContractOf.methods.MaxLimitPerTransaction().call();
 
                         // console.log("totalnft", totalnft);
@@ -524,6 +524,8 @@ function Mint({ chainid_id }) {
                             mintingBusdPrice = parseFloat(mintingBusdPrice)
                             // setMintPriceBUSD(mintingBusdPrice)
                             let totalMintingPriceBusd = value * mintingBusdPrice + 0.01
+                            totalMintingPriceBusd = web3.utils.toWei(totalMintingPriceBusd.toString())
+
                             // console.log("maxSupply", maxSupply);
                             // console.log("ttlSupply", maxLimitprTransaction);
 
@@ -536,70 +538,69 @@ function Mint({ chainid_id }) {
                             // if (llisted_check == 'true') {
 
 
-                                if (parseInt(ttlSupply) < parseInt(maxSupply)) {
-                                    if (paused == false) {
-                                        if (value < parseInt(maxLimitprTransaction)) {
-                                            if (parseFloat(userBusdBalance) >= totalMintingPriceBusd) {
-                                                // console.log("Minting Value= ", value);
-                                                // console.log("Minting totalMintingPriceWire= ", totalMintingPriceBusd);
-                                                // let BusdPrice = await nftContractOf.methods.WhitelistMinitngPricein_BUSD().call();
+                            if (parseInt(ttlSupply) < parseInt(maxSupply)) {
+                                if (paused == false) {
+                                    if (value < parseInt(maxLimitprTransaction)) {
+                                        if (parseFloat(userBusdBalance) >= totalMintingPriceBusd) {
+                                            // console.log("Minting Value= ", value);
+                                            // console.log("Minting totalMintingPriceWire= ", totalMintingPriceBusd);
+                                            // let BusdPrice = await nftContractOf.methods.WhitelistMinitngPricein_BUSD().call();
 
 
-                                                // BusdPrice = parseFloat(BusdPrice)
-                                                // let b = BusdPrice * value;
-
-                                                
-
-                                                totalMintingPriceBusd = web3.utils.toWei(totalMintingPriceBusd.toString())
-                                                await busdContractOf.methods.approve(wireNftContractAddress, totalMintingPriceBusd).send({
-                                                    from: acc
-                                                })
-                                                setButtonThree("Please Wait For Second Confirmation")
-                                                toast.success("Transaction Confirmed")
-                                                let hash = await nftContractOf.methods.mint_with_BUSD(value, totalMintingPriceBusd).send({
-                                                    from: acc,
-                                                })
-                                                toast.success("Transaction Confirmed")
+                                            // BusdPrice = parseFloat(BusdPrice)
+                                            // let b = BusdPrice * value;
 
 
-                                                hash = hash.transactionHash
-                                                let postapi = await axios.post('https://whenftapi.herokuapp.com/buynfttoken', {
-                                                    "uid": inputdatahere,
-                                                    "address": acc,
-                                                    "nft": value,
-                                                    "token": totalMintingPriceBusd,
-                                                    "txn": "vgd54"
-                                                })
 
-                                                setButtonThree("Mint With Busd")
-                                                toast.success("Transaction Succefful")
-                                                // console.log("postapi", postapi);
-                                                toast.success("Success", postapi.data.data)
-                                                setinputdatahere(" ")
+                                            await busdContractOf.methods.approve(wireNftContractAddress, totalMintingPriceBusd).send({
+                                                from: acc
+                                            })
+                                            setButtonThree("Please Wait For Second Confirmation")
+                                            toast.success("Transaction Confirmed")
+                                            let hash = await nftContractOf.methods.mint_with_BUSD(value, totalMintingPriceBusd).send({
+                                                from: acc,
+                                            })
+                                            toast.success("Transaction Confirmed")
 
 
-                                            } else {
-                                                toast.error("Out Of Balance")
-                                                setButtonThree("Mint With Busd")
+                                            hash = hash.transactionHash
+                                            let postapi = await axios.post('https://whenftapi.herokuapp.com/buynfttoken', {
+                                                "uid": inputdatahere,
+                                                "address": acc,
+                                                "nft": value,
+                                                "token": totalMintingPriceBusd,
+                                                "txn": "vgd54"
+                                            })
 
-                                            }
+                                            setButtonThree("Mint With Busd")
+                                            toast.success("Transaction Succefful")
+                                            // console.log("postapi", postapi);
+                                            toast.success("Success", postapi.data.data)
+                                            setinputdatahere(" ")
+
 
                                         } else {
-                                            toast.error("No of Minting is Greater than maximum limit Per Transaction")
+                                            toast.error("Out Of Balance")
                                             setButtonThree("Mint With Busd")
 
                                         }
+
                                     } else {
-                                        toast.error("Paused is False")
+                                        toast.error("No of Minting is Greater than maximum limit Per Transaction")
                                         setButtonThree("Mint With Busd")
 
                                     }
-
                                 } else {
-                                    toast.error("Max Supply is Greater than total Supply")
+                                    toast.error("Paused is False")
                                     setButtonThree("Mint With Busd")
 
                                 }
+
+                            } else {
+                                toast.error("Max Supply is Greater than total Supply")
+                                setButtonThree("Mint With Busd")
+
+                            }
                             // }
                             // else {
                             //     totalMintingPriceBusd = web3.utils.toWei(totalMintingPriceBusd.toString())
@@ -801,7 +802,7 @@ function Mint({ chainid_id }) {
                 <div className="container">
 
                     <h1>MINT WITH BSC</h1>
-                       
+
 
                     <div className="row mt-5">
                         <div className="">
@@ -823,7 +824,7 @@ function Mint({ chainid_id }) {
                                                 </div> */}
 
                                                 <div className="top_div_here">
-                                         <input className="bcs" type="number" name="number"  onChange={(e) => setValue(e.target.value)} value={value} ></input>
+                                                    <input className="bcs" type="number" name="number" onChange={(e) => setValue(e.target.value)} value={value} ></input>
 
                                                     <div className="btn-area1 mt-5">
                                                         <a class="btn btn-box " onClick={() => myMintBNB()}>
