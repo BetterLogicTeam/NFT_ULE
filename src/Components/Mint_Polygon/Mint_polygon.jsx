@@ -324,7 +324,7 @@ const myMintWire = async () => {
                         mintingWirePrice = web3.utils.fromWei(mintingWirePrice);
                         // console.log("mintingWirePrice", mintingWirePrice);
                         mintingWirePrice = parseFloat(mintingWirePrice);
-                        let totalMintingPriceWire = value * mintingWirePrice
+                        let totalMintingPriceWire = value * mintingWirePrice+0.01
                         totalMintingPriceWire = web3.utils.toWei(totalMintingPriceWire.toString())
                         // console.log("totalMintingPriceWire",totalMintingPriceWire);
 
