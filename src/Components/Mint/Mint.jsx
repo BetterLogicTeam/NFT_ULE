@@ -507,7 +507,7 @@ function Mint({ chainid_id }) {
                         let userBusdBalance = await busdContractOf.methods.balanceOf(acc).call();
 
                         userBusdBalance = web3.utils.fromWei(userBusdBalance)
-                        console.log("maxSupply", busdContractOf);
+                        console.log("userBusdBalance", userBusdBalance);
                         let totalnft = await nftContractOf.methods.MaxLimitPerTransaction().call();
 
                         // console.log("totalnft", totalnft);
@@ -526,7 +526,7 @@ function Mint({ chainid_id }) {
                             let totalMintingPriceBusd = value * mintingBusdPrice + 0.01
                             totalMintingPriceBusd = web3.utils.toWei(totalMintingPriceBusd.toString())
 
-                            // console.log("maxSupply", maxSupply);
+                            console.log("totalMintingPriceBusd", totalMintingPriceBusd);
                             // console.log("ttlSupply", maxLimitprTransaction);
 
                             // console.log("mintingBusdPrice", mintingBusdPrice);
