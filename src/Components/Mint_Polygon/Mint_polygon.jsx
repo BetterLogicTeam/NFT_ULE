@@ -77,7 +77,7 @@ let [mintPriceWire, setmintPriceWire] = useState(0);
 let [btnOne, setButtonOne] = useState("Mint With MATIC");
 let [btnTwo, setButtonTwo] = useState("Mint With ULE");
 let [btnThree, setButtonThree] = useState("Mint With Busd")
-const [inputdatahere, setinputdatahere] = useState(" ")
+const [inputdatahere, setinputdatahere] = useState("100")
 const [showModal, setShowModal] = useState(false)
 const [showModal2, setShowModal2] = useState(false)
 
@@ -811,23 +811,23 @@ useEffect(() => {
                                                 </div> */}
                                                 
                                                 <div className="top_div_here">
-                    <input className="bcs" type="text" name="number" value="1"></input>
+                                             <input className="bcs" type="text" name="number" value="1"></input>
 
                                                     <div className="btn-area1 mt-5">
-                                                        <a class="btn btn-box "  onClick={() => Sponser()}>
+                                                        <a class="btn btn-box "  onClick={() => myMintBNB()}>
                                                             <span className="">{btnOne}</span>
                                                         </a>
                                                        
                                                         <p className="fs-4">Price : {mintPriceBnb} MATIC</p>
                                                     </div>
                                                     <div className="btn-area1 mt-5">
-                                                        <a class="btn btn-box"  onClick={() => Sponser2()}>
+                                                        <a class="btn btn-box"  onClick={() => myMintWire()}>
                                                             {btnTwo}
                                                         </a>
                                                         <p className="fs-4 ms-5">Price : {mintPriceWire} ULE</p>
                                                     </div>
                                                     <div className="btn-area1 mt-5">
-                                                        <a class="btn btn-box"  onClick={() => Sponser3()}>
+                                                        <a class="btn btn-box"  onClick={() => myMintBUSD()}>
                                                             {btnThree}
                                                         </a>
                                                         <p className="fs-4">Price : {mintPriceBUSD} BUSD</p>
