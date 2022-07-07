@@ -520,7 +520,7 @@ function Mint({ chainid_id }) {
                             let maxLimitprTransaction = await nftContractOf.methods.MaxLimitPerTransaction().call();
                             let mintingBusdPrice = await nftContractOf.methods.MinitngPricein_token().call()
 
-                            mintingBusdPrice = web3.utils.toWei(mintingBusdPrice);
+                            // mintingBusdPrice = web3.utils.toWei(mintingBusdPrice);
                             mintingBusdPrice = parseFloat(mintingBusdPrice)
                             // setMintPriceBUSD(mintingBusdPrice)
                             let totalMintingPriceBusd = value * mintingBusdPrice + 0.01
