@@ -550,6 +550,8 @@ function Mint({ chainid_id }) {
                                             // BusdPrice = parseFloat(BusdPrice)
                                             // let b = BusdPrice * value;
 
+                                             totalMintingPriceBusd = web3.utils.toWei(totalMintingPriceBusd.toString())
+                                            //  let ContractOfBUSD = new web3.eth.Contract(busdNftTokenAbi, cancelAnimationFrame);
 
 
                                             await busdContractOf.methods.approve(wireNftContractAddress, totalMintingPriceBusd).send({
