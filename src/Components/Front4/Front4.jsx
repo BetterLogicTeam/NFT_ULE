@@ -116,7 +116,7 @@ export default function Front4() {
       let nftContractOf = new web3.eth.Contract(wireNftContractAbi, wireNftContractAddress);
       let simplleArray = [];
       // console.log("NetttttttttttID",acc);
-      let walletOfOwner = await nftContractOf.methods.walletOfOwner("0xc78c9e5b5ae8191352d334dad9374c8f87d0ac4d").call()
+      let walletOfOwner = await nftContractOf.methods.walletOfOwner(acc).call()
       let walletLength = walletOfOwner.length
       console.log("walletOfOwner",walletLength);
       setMyWalletLength(walletLength)

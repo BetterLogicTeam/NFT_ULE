@@ -270,7 +270,7 @@ function Mint({ chainid_id }) {
                         toast.error("Transaction failed")
                         setButtonOne("Mint With BNB")
 
-                    }
+                      }
                 } else {
                     toast.error("User Is Not Exists")
                     setinputdatahere(" ")
