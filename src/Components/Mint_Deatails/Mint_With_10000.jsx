@@ -465,9 +465,9 @@ export default function Mint_With_10000() {
               }
 
 
-          } catch (e) {
-              console.log("User Is Not Exists", e);
-              toast.error("User Is Not Exists")
+        } catch (e) {
+              console.log("Transaction failed", e);
+              toast.error("Transaction failed")
               setinputdatahere(" ")
 
 
