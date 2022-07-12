@@ -35,7 +35,7 @@ export default function Front2() {
                     know it’s real because you see the artist’s signature on the
                     canvas. Somebody can photocopy the painting, but they don’t
                     own it — you do. Before NFTs, digital assets were like
-                    photocopies: ULEn you buy a ULE Club NFT, the artwork is
+                    photocopies: ULE NFT you buy a ULE Club NFT, the artwork is
                     yours to keep or use in advertising, Whether you plan to
                     sell it or not.
                   </p>
