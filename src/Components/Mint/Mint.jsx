@@ -803,7 +803,7 @@ function Mint({ chainid_id }) {
 
                 <div className="container">
 
-                    <h1>MINT WITH BSC</h1>
+                    <h1>MINT WITH 100 USD</h1>
 
 
                     <div className="row mt-5">
@@ -828,25 +828,25 @@ function Mint({ chainid_id }) {
                                                 <div className="top_div_here">
                                                     <input className="bcs" type="number" name="number" onChange={(e) => setValue(e.target.value)} value={value} ></input>
 
-                                                    <div className="btn-area1 mt-5">
+                                                    {/* <div className="btn-area1 mt-5">
                                                         <a class="btn btn-box " onClick={() => myMintBNB()}>
                                                             <span className="">{btnOne}</span>
                                                         </a>
 
                                                         <p className="fs-4 ms-4 text-white">Price : {mintPriceBnb} BNB</p>
-                                                    </div>
+                                                    </div> */}
                                                     <div className="btn-area1 mt-5">
                                                         <a class="btn btn-box" onClick={() => myMintWire()}>
                                                             {btnTwo}
                                                         </a>
                                                         <p className="fs-4 text-white" style={{ marginLeft: "1rem" }}>Price : {mintPriceWire} ULE</p>
                                                     </div>
-                                                    <div className="btn-area1 mt-5">
+                                                    {/* <div className="btn-area1 mt-5">
                                                         <a class="btn btn-box" onClick={() => myMintBUSD()}>
                                                             {btnThree}
                                                         </a>
                                                         <p className="fs-4 text-white">Price : {mintPriceBUSD} BUSD</p>
-                                                    </div>
+                                                    </div> */}
 
 
 

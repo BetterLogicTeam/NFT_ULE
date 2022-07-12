@@ -25,12 +25,12 @@ export default function Index_main({chainid}) {
       <Front2 />
       {/* <Front3 /> */}
       <Front4 />
-     <Bsc_mint_home/>
+     {/* <Bsc_mint_home/> */}
      
       {/* <Crypto /> */}
       {/* <Explore /> */}
       {/* <Road /> */}
-      <Mint_2 />
+      {/* <Mint_2 /> */}
       <Create_sell_nft />
       {/* <Slide /> */}
     </div>

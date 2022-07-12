@@ -9,6 +9,7 @@ import Web3 from "web3";
 
 
 import "./Front4.css";
+import { ULE_NFT_100, ULE_NFT_1000, ULE_NFT_10000, ULE_NFT_10000_ABI, ULE_NFT_1000_ABI, ULE_NFT_100_ABI, ULE_NFT_200, ULE_NFT_2000, ULE_NFT_2000_ABI, ULE_NFT_200_ABI, ULE_NFT_300, ULE_NFT_3000, ULE_NFT_3000_ABI, ULE_NFT_300_ABI, ULE_NFT_400, ULE_NFT_4000, ULE_NFT_4000_ABI, ULE_NFT_400_ABI, ULE_NFT_500, ULE_NFT_5000, ULE_NFT_5000_ABI, ULE_NFT_500_ABI } from "../../utilies/Bsc_contract";
 
 export default function Front4() {
 
@@ -17,7 +18,18 @@ export default function Front4() {
   let [imageArray, setImageArray] = useState([]);
   let [initialLimit, setInitialLimit] = useState(0);
   let [finalLimit, setFinalLimit] = useState(12)
+  let [NFT200, setNFT200] = useState();
+  let [NFT300, setNFT300] = useState();
+  let [NFT400, setNFT400] = useState();
+  let [NFT500, setNFT500] = useState();
+  let [NFT1000, setNFT1000] = useState();
+  let [NFT2000, setNFT2000] = useState();
+  let [NFT3000, setNFT3000] = useState();
+  let [NFT4000, setNFT4000] = useState();
+  let [NFT5000, setNFT5000] = useState();
+  let [NFT10000, setNFT10000] = useState();
   let [mywalletLength, setMyWalletLength] = useState();
+
   let [pageNumber, setPageNumber] = useState(1)
   let [totalPages, setTotalPages] = useState(1)
   let [NetId_set, setNetId_set] = useState()
@@ -113,38 +125,263 @@ export default function Front4() {
     }
     else {
       const web3 = window.web3;
-      let nftContractOf = new web3.eth.Contract(wireNftContractAbi, wireNftContractAddress);
+      let ULE_NFT_100_OF = new web3.eth.Contract(ULE_NFT_100_ABI, ULE_NFT_100);
+      let ULE_NFT_200_OF = new web3.eth.Contract(ULE_NFT_200_ABI, ULE_NFT_200);
+      let ULE_NFT_300_OF = new web3.eth.Contract(ULE_NFT_300_ABI, ULE_NFT_300);
+      let ULE_NFT_400_OF = new web3.eth.Contract(ULE_NFT_400_ABI, ULE_NFT_400);
+      let ULE_NFT_500_OF = new web3.eth.Contract(ULE_NFT_500_ABI, ULE_NFT_500);
+      let ULE_NFT_1000_OF = new web3.eth.Contract(ULE_NFT_1000_ABI, ULE_NFT_1000);
+      let ULE_NFT_2000_OF = new web3.eth.Contract(ULE_NFT_2000_ABI, ULE_NFT_2000);
+      let ULE_NFT_3000_OF = new web3.eth.Contract(ULE_NFT_3000_ABI, ULE_NFT_3000);
+      let ULE_NFT_4000_OF = new web3.eth.Contract(ULE_NFT_4000_ABI, ULE_NFT_4000);
+      let ULE_NFT_5000_OF = new web3.eth.Contract(ULE_NFT_5000_ABI, ULE_NFT_5000);
+      let ULE_NFT_10000_OF = new web3.eth.Contract(ULE_NFT_10000_ABI, ULE_NFT_10000);
+
+
       let simplleArray = [];
-      // console.log("NetttttttttttID",acc);
-      let walletOfOwner = await nftContractOf.methods.walletOfOwner(acc).call()
-      let walletLength = walletOfOwner.length
+     
+      let walletOfOwner100 = await ULE_NFT_100_OF.methods.walletOfOwner(acc).call()
+      let Price100=await ULE_NFT_100_OF.methods.MinitngPricein_token().call()
+
+      let walletLength = walletOfOwner100.length
       console.log("walletOfOwner",walletLength);
       setMyWalletLength(walletLength)
       for (let i = 0; i <walletLength; i++) {
 
         try {
-          let res = await axios.get(`https://ulenftpolygon.mypinata.cloud/ipfs/QmfHrvnsA1dUJJxbRSmBscffSAezQb3uxFxBK3xwa1w1SW/${walletOfOwner[i]}.gif`)
+          let res = await axios.get(`https://ulenftpolygon.mypinata.cloud/ipfs/QmfHrvnsA1dUJJxbRSmBscffSAezQb3uxFxBK3xwa1w1SW/${walletOfOwner100[i]}.gif`)
           // let res = await axios.get(`/config/${walletOfOwner[i]}.json`)
           let imageUrl = res.config.url;
           console.log("check", res);
-          let dna = walletOfOwner[i]
+          let dna = Price100
           simplleArray = [...simplleArray, { imageUrl: imageUrl, num: dna }]
           setImageArray(simplleArray);
         } catch (e) {
           console.log("Error while Fetching Api", e)
         }
       }
-      let ttlPage = parseInt(walletLength) / 6;
-      ttlPage = Math.ceil(ttlPage);
-      setTotalPages(ttlPage)
-      // console.log("Total Pages", ttlPage);
-      if (parseInt(walletLength) > 0) {
-        {
-          let myImgArry = []
-          let myNameDate = []
 
+
+      let walletOfOwner200 = await ULE_NFT_200_OF.methods.walletOfOwner(acc).call()
+      let Price200=await ULE_NFT_200_OF.methods.MinitngPricein_token().call()
+
+      let walletLength200 = walletOfOwner200.length
+      console.log("walletLength200",walletLength200);
+      setMyWalletLength(walletLength200)
+      for (let i = 0; i <walletLength200; i++) {
+
+        try {
+          let res = await axios.get(`https://ulenftpolygon.mypinata.cloud/ipfs/QmfHrvnsA1dUJJxbRSmBscffSAezQb3uxFxBK3xwa1w1SW/${walletOfOwner200[i]}.gif`)
+          // let res = await axios.get(`/config/${walletOfOwner[i]}.json`)
+          let imageUrl = res.config.url;
+          console.log("check", res);
+          let dna = Price200
+          simplleArray = [...simplleArray, { imageUrl: imageUrl, num: dna }]
+          setImageArray(simplleArray);
+        } catch (e) {
+          console.log("Error while Fetching Api", e)
         }
       }
+
+
+      let walletOfOwner300 = await ULE_NFT_300_OF.methods.walletOfOwner(acc).call()
+      let Price300=await ULE_NFT_300_OF.methods.MinitngPricein_token().call()
+
+      let walletLength300 = walletOfOwner300.length
+      console.log("walletOfOwner",walletLength300);
+      setMyWalletLength(walletLength300)
+      for (let i = 0; i <walletLength300; i++) {
+
+        try {
+          let res = await axios.get(`https://ulenftpolygon.mypinata.cloud/ipfs/QmfHrvnsA1dUJJxbRSmBscffSAezQb3uxFxBK3xwa1w1SW/${walletOfOwner300[i]}.gif`)
+          // let res = await axios.get(`/config/${walletOfOwner[i]}.json`)
+          let imageUrl = res.config.url;
+          console.log("check", res);
+          let dna = Price300
+          simplleArray = [...simplleArray, { imageUrl: imageUrl, num: dna }]
+          setImageArray(simplleArray);
+        } catch (e) {
+          console.log("Error while Fetching Api", e)
+        }
+      }
+
+
+      let walletOfOwner400 = await ULE_NFT_400_OF.methods.walletOfOwner(acc).call()
+      let Price400=await ULE_NFT_400_OF.methods.MinitngPricein_token().call()
+
+      let walletLength400 = walletOfOwner400.length
+      console.log("walletOfOwner",walletLength400);
+      setMyWalletLength(walletLength400)
+      for (let i = 0; i <walletLength400; i++) {
+
+        try {
+          let res = await axios.get(`https://ulenftpolygon.mypinata.cloud/ipfs/QmfHrvnsA1dUJJxbRSmBscffSAezQb3uxFxBK3xwa1w1SW/${walletOfOwner400[i]}.gif`)
+          // let res = await axios.get(`/config/${walletOfOwner[i]}.json`)
+          let imageUrl = res.config.url;
+          console.log("check", res);
+          let dna = Price400
+          simplleArray = [...simplleArray, { imageUrl: imageUrl, num: dna }]
+          setImageArray(simplleArray);
+        } catch (e) {
+          console.log("Error while Fetching Api", e)
+        }
+      }
+
+
+
+      let walletOfOwner500 = await ULE_NFT_500_OF.methods.walletOfOwner(acc).call()
+      let Price500=await ULE_NFT_500_OF.methods.MinitngPricein_token().call()
+
+      let walletLength500 = walletOfOwner500.length
+      console.log("walletOfOwner",walletLength500);
+      setMyWalletLength(walletLength500)
+      for (let i = 0; i <walletLength500; i++) {
+
+        try {
+          let res = await axios.get(`https://ulenftpolygon.mypinata.cloud/ipfs/QmfHrvnsA1dUJJxbRSmBscffSAezQb3uxFxBK3xwa1w1SW/${walletOfOwner500[i]}.gif`)
+          // let res = await axios.get(`/config/${walletOfOwner[i]}.json`)
+          let imageUrl = res.config.url;
+          console.log("check", res);
+          let dna =Price500
+          simplleArray = [...simplleArray, { imageUrl: imageUrl, num: dna }]
+          setImageArray(simplleArray);
+        } catch (e) {
+          console.log("Error while Fetching Api", e)
+        }
+      }
+
+
+      let walletOfOwner1000 = await ULE_NFT_1000_OF.methods.walletOfOwner(acc).call()
+      let Price1000=await ULE_NFT_1000_OF.methods.MinitngPricein_token().call()
+
+      let walletLength1000 = walletOfOwner1000.length
+      console.log("walletOfOwner",walletLength1000);
+      setMyWalletLength(walletLength1000)
+      for (let i = 0; i <walletLength1000; i++) {
+
+        try {
+          let res = await axios.get(`https://ulenftpolygon.mypinata.cloud/ipfs/QmfHrvnsA1dUJJxbRSmBscffSAezQb3uxFxBK3xwa1w1SW/${walletOfOwner1000[i]}.gif`)
+          // let res = await axios.get(`/config/${walletOfOwner[i]}.json`)
+          let imageUrl = res.config.url;
+          console.log("check", res);
+          let dna = Price1000
+          simplleArray = [...simplleArray, { imageUrl: imageUrl, num: dna }]
+          setImageArray(simplleArray);
+        } catch (e) {
+          console.log("Error while Fetching Api", e)
+        }
+      }
+
+
+      let walletOfOwner2000 = await ULE_NFT_2000_OF.methods.walletOfOwner(acc).call()
+      let Price2000=await ULE_NFT_2000_OF.methods.MinitngPricein_token().call()
+
+      let walletLength2000 = walletOfOwner2000.length
+      console.log("walletOfOwner",walletLength2000);
+      setMyWalletLength(walletLength2000)
+      for (let i = 0; i <walletLength2000; i++) {
+
+        try {
+          let res = await axios.get(`https://ulenftpolygon.mypinata.cloud/ipfs/QmfHrvnsA1dUJJxbRSmBscffSAezQb3uxFxBK3xwa1w1SW/${walletOfOwner2000[i]}.gif`)
+          // let res = await axios.get(`/config/${walletOfOwner[i]}.json`)
+          let imageUrl = res.config.url;
+          console.log("check", res);
+          let dna = Price2000
+          simplleArray = [...simplleArray, { imageUrl: imageUrl, num: dna }]
+          setImageArray(simplleArray);
+        } catch (e) {
+          console.log("Error while Fetching Api", e)
+        }
+      }
+
+
+      let walletOfOwner3000 = await ULE_NFT_3000_OF.methods.walletOfOwner(acc).call()
+      let Price3000=await ULE_NFT_3000_OF.methods.MinitngPricein_token().call()
+
+      let walletLength3000 = walletOfOwner3000.length
+      console.log("walletOfOwner",walletLength3000);
+      setMyWalletLength(walletLength3000)
+      for (let i = 0; i <walletLength3000; i++) {
+
+        try {
+          let res = await axios.get(`https://ulenftpolygon.mypinata.cloud/ipfs/QmfHrvnsA1dUJJxbRSmBscffSAezQb3uxFxBK3xwa1w1SW/${walletOfOwner3000[i]}.gif`)
+          // let res = await axios.get(`/config/${walletOfOwner[i]}.json`)
+          let imageUrl = res.config.url;
+          console.log("check", res);
+          let dna = Price3000
+          simplleArray = [...simplleArray, { imageUrl: imageUrl, num: dna }]
+          setImageArray(simplleArray);
+        } catch (e) {
+          console.log("Error while Fetching Api", e)
+        }
+      }
+
+
+      let walletOfOwner4000 = await ULE_NFT_4000_OF.methods.walletOfOwner(acc).call()
+      let Price4000=await ULE_NFT_4000_OF.methods.MinitngPricein_token().call()
+
+      let walletLength4000 = walletOfOwner4000.length
+      console.log("walletOfOwner",walletLength4000);
+      setMyWalletLength(walletLength4000)
+      for (let i = 0; i <walletLength4000; i++) {
+
+        try {
+          let res = await axios.get(`https://ulenftpolygon.mypinata.cloud/ipfs/QmfHrvnsA1dUJJxbRSmBscffSAezQb3uxFxBK3xwa1w1SW/${walletOfOwner4000[i]}.gif`)
+          // let res = await axios.get(`/config/${walletOfOwner[i]}.json`)
+          let imageUrl = res.config.url;
+          console.log("check", res);
+          let dna = Price4000
+          simplleArray = [...simplleArray, { imageUrl: imageUrl, num: dna }]
+          setImageArray(simplleArray);
+        } catch (e) {
+          console.log("Error while Fetching Api", e)
+        }
+      }
+
+
+      let walletOfOwner5000 = await ULE_NFT_5000_OF.methods.walletOfOwner(acc).call()
+      let Price5000=await ULE_NFT_5000_OF.methods.MinitngPricein_token().call()
+
+      let walletLength5000 = walletOfOwner5000.length
+      console.log("walletOfOwner",walletLength5000);
+      setMyWalletLength(walletLength5000)
+      for (let i = 0; i <walletLength5000; i++) {
+
+        try {
+          let res = await axios.get(`https://ulenftpolygon.mypinata.cloud/ipfs/QmfHrvnsA1dUJJxbRSmBscffSAezQb3uxFxBK3xwa1w1SW/${walletOfOwner5000[i]}.gif`)
+          // let res = await axios.get(`/config/${walletOfOwner[i]}.json`)
+          let imageUrl = res.config.url;
+          console.log("check", res);
+          let dna = Price5000
+          simplleArray = [...simplleArray, { imageUrl: imageUrl, num: dna }]
+          setImageArray(simplleArray);
+        } catch (e) {
+          console.log("Error while Fetching Api", e)
+        }
+      }
+
+
+      let walletOfOwner10000 = await ULE_NFT_10000_OF.methods.walletOfOwner(acc).call()
+     
+      let Price10000=await ULE_NFT_10000_OF.methods.MinitngPricein_token().call()
+      let walletLength10000 = walletOfOwner10000.length
+      console.log("walletOfOwner",walletLength10000);
+      setMyWalletLength(walletLength10000)
+      for (let i = 0; i <walletLength10000; i++) {
+
+        try {
+          let res = await axios.get(`https://ulenftpolygon.mypinata.cloud/ipfs/QmfHrvnsA1dUJJxbRSmBscffSAezQb3uxFxBK3xwa1w1SW/${walletOfOwner10000[i]}.gif`)
+          // let res = await axios.get(`/config/${walletOfOwner[i]}.json`)
+          let imageUrl = res.config.url;
+          console.log("check", res);
+          let dna = Price10000
+          simplleArray = [...simplleArray, { imageUrl: imageUrl, num: dna }]
+          setImageArray(simplleArray);
+        } catch (e) {
+          console.log("Error while Fetching Api", e)
+        }
+      }
+     
     }
   }
 
@@ -185,7 +422,7 @@ export default function Front4() {
                       </div>
 
                       <div class="collection-text home-2 text-center">
-                        <a href="#">ULE NFT {items.num}</a>
+                        <a href="#">ULE NFT {items.num} USD</a>
 
                       </div>
                     </div>
