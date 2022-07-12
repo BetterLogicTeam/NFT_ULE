@@ -51,7 +51,7 @@ export default function Front2() {
                   </h4> */}
                   <h1>EXPLORE THE ULE nft's WITH US</h1>
                   <p>
-                    The ULEnft's is an online, three-dimensional universe that
+                    The ULE nft's is an online, three-dimensional universe that
                     combines multiple virtual spaces. It can be compared to a
                     future version of the internet. With metaverse, users will
                     be able to collaborate, meet, play games, and socialize in
@@ -71,7 +71,7 @@ export default function Front2() {
                     Display art in high resolution
                   </h1>
                   <p class="">
-                    An ULEnft's token has metadata encoded permanently on the
+                    An ULE nft's token has metadata encoded permanently on the
                     blockchain in a format that is "non fungible", it includes a
                     URI which points to a unique JPEG, a piece of art which is
                     the visual representation of this token, All ULE Club NFTs

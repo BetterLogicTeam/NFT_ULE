@@ -37,7 +37,7 @@ export default function Create_sell_nft() {
               </h3>
               <p class="txt_black">
                 Once you've set up your wallet of choice, connect it to
-                OpenSeaby clicking the NFT Marketplacein the top right corner.
+                OpenSea by clicking the NFT Marketplace in the top right corner.
               </p>
             </div>
             <div class="text-center">
