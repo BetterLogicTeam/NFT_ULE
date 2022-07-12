@@ -75,37 +75,18 @@ export default function Front4() {
     }
   }
 
-  // let array_data=[]
-  // const Check_fuction=async()=>{
-  //   let wallet=[0,15,78,19]
-  //   for (let i = 0; i<wallet.length; i++) {
-  //     let val=wallet[i]
-  //     let  url_num=val+2770;
-  //     console.log("url_num",url_num);
-  //     try {
-  //       let res = await axios.get(`https://usdulenft.mypinata.cloud/ipfs/QmZfw5joy4ZDhXZiJu5EvRuNYEP38MAYbKcMjWdB3DfwTZ/${url_num}.gif`)
-  //       console.log("Rehman",res.config.url);
-  //       let imageUrl = res.config.url;
-  //       // console.log("check", res);
-  //       let dna = url_num
-  //       array_data = [...array_data, { imageUrl: imageUrl, num: dna }]
-  //       setInitialLimit(array_data);
-        
-  //       // console.log("REhman",wallet.forEach(function (item, index) {
-          
-  //       // }
-  //       // ));
-  //     }
-  //     catch(e){
-  //       console.log("Apna Fuction",e);
-  //     }
 
-  //   }
+  const Check_fuction=async()=>{
+    const web3 = window.web3;
+
+    let ULE_NFT_4000_OF = new web3.eth.Contract(ULE_NFT_4000_ABI, ULE_NFT_4000);
+    
 
 
-  // }
+  }
 
   const allImagesNfts = async () => {
+    let simplleArray = [];
 
 
     window.web3 = new Web3(window.ethereum);
@@ -168,7 +149,6 @@ export default function Front4() {
       let ULE_NFT_10000_OF = new web3.eth.Contract(ULE_NFT_10000_ABI, ULE_NFT_10000);
 
 
-      let simplleArray = [];
      
       let walletOfOwner100 = await ULE_NFT_100_OF.methods.walletOfOwner(acc).call()
       let Price100=await ULE_NFT_100_OF.methods.MinitngPricein_token().call()
@@ -201,7 +181,9 @@ export default function Front4() {
       setMyWalletLength(walletLength200)
       for (let i = 0; i <walletLength200; i++) {
         let val=walletOfOwner200[i]
-        let  url_num=val+2770;
+       
+        let  url_num=2770+(+val);
+
         try {
           let res = await axios.get(`https://usdulenft.mypinata.cloud/ipfs/QmZfw5joy4ZDhXZiJu5EvRuNYEP38MAYbKcMjWdB3DfwTZ/${url_num}.gif`)
           // let res = await axios.get(`/config/${walletOfOwner[i]}.json`)
@@ -224,7 +206,9 @@ export default function Front4() {
       setMyWalletLength(walletLength300)
       for (let i = 0; i <walletLength300; i++) {
         let val=walletOfOwner300[i]
-        let  url_num=val+3460;
+       
+        let  url_num=3460+(+val);
+
         try {
           let res = await axios.get(`https://usdulenft.mypinata.cloud/ipfs/QmVEzHWb59Zo9r9sUEY1CVwWoFQkYEk4VgHRYYT83Vq636/${url_num}.gif`)
           // let res = await axios.get(`/config/${walletOfOwner[i]}.json`)
@@ -247,7 +231,9 @@ export default function Front4() {
       setMyWalletLength(walletLength400)
       for (let i = 0; i <walletLength400; i++) {
         let val=walletOfOwner400[i]
-        let  url_num=val+4130;
+       
+        let  url_num=4130+(+val);
+
         try {
           let res = await axios.get(`https://usdulenft.mypinata.cloud/ipfs/QmVjhfnbMkBgsw1ijXGr6FFohhD55Nm7SZupTdkWEzzGQX/${url_num}.gif`)
           // let res = await axios.get(`/config/${walletOfOwner[i]}.json`)
@@ -271,7 +257,9 @@ export default function Front4() {
       setMyWalletLength(walletLength500)
       for (let i = 0; i <walletLength500; i++) {
         let val=walletOfOwner500[i]
-        let  url_num=val+4800;
+       
+        let  url_num=4800+(+val);
+
         try {
           let res = await axios.get(`https://usdulenft.mypinata.cloud/ipfs/QmYhnW22KPbckGWaePUASowNHKrck3Xk2XcVRbYM78ktTU/${url_num}.gif`)
           // let res = await axios.get(`/config/${walletOfOwner[i]}.json`)
@@ -294,7 +282,9 @@ export default function Front4() {
       setMyWalletLength(walletLength1000)
       for (let i = 0; i <walletLength1000; i++) {
         let val=walletOfOwner1000[i]
-        let  url_num=val+5540;
+  
+        let  url_num=5540+(+val);
+
         try {
           let res = await axios.get(`https://usdulenft.mypinata.cloud/ipfs/QmRpDTwYkr81eix3MJQuAYqMksXhdRFDutjzYok3Z7JHge/p1/${url_num}.gif`)
           // let res = await axios.get(`/config/${walletOfOwner[i]}.json`)
@@ -317,7 +307,9 @@ export default function Front4() {
       setMyWalletLength(walletLength2000)
       for (let i = 0; i <walletLength2000; i++) {
         let val=walletOfOwner2000[i]
-        let  url_num=val+5840;
+      
+        let  url_num=5840+(+val);
+
         try {
           let res = await axios.get(`https://usdulenft.mypinata.cloud/ipfs/QmPDQfrrLFiNwHPrE4f2oZP3Zspg4ZMk6jAu9spTNdmk4p/${url_num}.gif`)
           // let res = await axios.get(`/config/${walletOfOwner[i]}.json`)
@@ -340,7 +332,7 @@ export default function Front4() {
       setMyWalletLength(walletLength3000)
       for (let i = 0; i <walletLength3000; i++) {
         let val=walletOfOwner3000[i]
-        let  url_num=val+6140;
+        let  url_num=6140+(+val);
         try {
           let res = await axios.get(`https://usdulenft.mypinata.cloud/ipfs/QmaFcyFxBQuo7qxvzN3PYm9W6oHeJypbiC9FuYhf6XeSEG/${url_num}.gif`)
           // let res = await axios.get(`/config/${walletOfOwner[i]}.json`)
@@ -353,22 +345,25 @@ export default function Front4() {
           console.log("Error while Fetching Api", e)
         }
       }
-
-
       let walletOfOwner4000 = await ULE_NFT_4000_OF.methods.walletOfOwner(acc).call()
       let Price4000=await ULE_NFT_4000_OF.methods.MinitngPricein_token().call()
 
       let walletLength4000 = walletOfOwner4000.length
-      console.log("walletOfOwner",walletLength4000);
+      console.log("walletOfOwner4000",walletOfOwner4000);
       setMyWalletLength(walletLength4000)
       for (let i = 0; i <walletLength4000; i++) {
         let val=walletOfOwner4000[i]
-        let  url_num=val+6440;
+        let startValue=6440
+        console.log("Val400",val)
+        let  url_num=6440+(+val);
+        console.log("Val400",url_num)
+
         try {
           let res = await axios.get(`https://usdulenft.mypinata.cloud/ipfs/QmeBnPEeQTaGgvKLYq7Ej51Kq5Kh2dNjan5fTg1eNkWBjZ/${url_num}.gif`)
+          console.log("Check44");
+          console.log("check", res);
           // let res = await axios.get(`/config/${walletOfOwner[i]}.json`)
           let imageUrl = res.config.url;
-          console.log("check", res);
           let dna = Price4000
           simplleArray = [...simplleArray, { imageUrl: imageUrl, num: dna }]
           setImageArray(simplleArray);
@@ -378,15 +373,19 @@ export default function Front4() {
       }
 
 
+     
+
+
       let walletOfOwner5000 = await ULE_NFT_5000_OF.methods.walletOfOwner(acc).call()
       let Price5000=await ULE_NFT_5000_OF.methods.MinitngPricein_token().call()
 
       let walletLength5000 = walletOfOwner5000.length
-      console.log("walletOfOwner",walletLength5000);
+      console.log("walletOfOwner5000",walletLength5000);
       setMyWalletLength(walletLength5000)
-      for (let i = 0; i <walletLength5000; i++) {
+      for (let i = 0; i<walletLength5000; i++) {
         let val=walletOfOwner5000[i]
-        let  url_num=val+6740;
+        let  url_num=6740+(+val)
+        console.log("url_num500",url_num);
         try {
           let res = await axios.get(`https://usdulenft.mypinata.cloud/ipfs/QmcSECUxFXFpxVUzWP63qPyonfRt8qW5UaJHa8GDL9yZnV/${url_num}.gif`)
           // let res = await axios.get(`/config/${walletOfOwner[i]}.json`)
@@ -409,7 +408,7 @@ export default function Front4() {
       setMyWalletLength(walletLength10000)
       for (let i = 0; i <walletLength10000; i++) {
         let val=walletOfOwner10000[i]
-        let  url_num=val+7040;
+        let  url_num=7040+(+val)
         try {
           let res = await axios.get(`https://usdulenft.mypinata.cloud/ipfs/QmeSFY6S6DzrhW7UPX9hfy6AvnwTahFQT15wCtWp7d25Mr/${url_num}.gif`)
           // let res = await axios.get(`/config/${walletOfOwner[i]}.json`)
@@ -433,8 +432,8 @@ export default function Front4() {
       getAccount()  
     }, 500);
     allImagesNfts();
-   
-  }, [imageArray]);
+    // Check_fuction()
+  }, []);
   return (
     <div>
 
