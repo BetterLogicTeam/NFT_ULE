@@ -16,7 +16,7 @@ export default function Front4() {
 
   let [btnTxt, setBtTxt] = useState();
   let [imageArray, setImageArray] = useState([]);
-  let [initialLimit, setInitialLimit] = useState(0);
+  let [initialLimit, setInitialLimit] = useState([]);
   let [finalLimit, setFinalLimit] = useState(12)
   let [NFT200, setNFT200] = useState();
   let [NFT300, setNFT300] = useState();
@@ -74,6 +74,36 @@ export default function Front4() {
 
     }
   }
+
+  // let array_data=[]
+  // const Check_fuction=async()=>{
+  //   let wallet=[0,15,78,19]
+  //   for (let i = 0; i<wallet.length; i++) {
+  //     let val=wallet[i]
+  //     let  url_num=val+2770;
+  //     console.log("url_num",url_num);
+  //     try {
+  //       let res = await axios.get(`https://usdulenft.mypinata.cloud/ipfs/QmZfw5joy4ZDhXZiJu5EvRuNYEP38MAYbKcMjWdB3DfwTZ/${url_num}.gif`)
+  //       console.log("Rehman",res.config.url);
+  //       let imageUrl = res.config.url;
+  //       // console.log("check", res);
+  //       let dna = url_num
+  //       array_data = [...array_data, { imageUrl: imageUrl, num: dna }]
+  //       setInitialLimit(array_data);
+        
+  //       // console.log("REhman",wallet.forEach(function (item, index) {
+          
+  //       // }
+  //       // ));
+  //     }
+  //     catch(e){
+  //       console.log("Apna Fuction",e);
+  //     }
+
+  //   }
+
+
+  // }
 
   const allImagesNfts = async () => {
 
@@ -149,7 +179,7 @@ export default function Front4() {
       for (let i = 0; i <walletLength; i++) {
 
         try {
-          let res = await axios.get(`https://ulenftpolygon.mypinata.cloud/ipfs/QmfHrvnsA1dUJJxbRSmBscffSAezQb3uxFxBK3xwa1w1SW/${walletOfOwner100[i]}.gif`)
+          let res = await axios.get(`https://usdulenft.mypinata.cloud/ipfs/QmdHtZGQU4FPBfytDAEyKYCqXHcNtzWSM6ymPuWVRnVR5Q/${walletOfOwner100[i]}.gif`)
           // let res = await axios.get(`/config/${walletOfOwner[i]}.json`)
           let imageUrl = res.config.url;
           console.log("check", res);
@@ -167,11 +197,13 @@ export default function Front4() {
 
       let walletLength200 = walletOfOwner200.length
       console.log("walletLength200",walletLength200);
+      // walletLength200=2770+walletLength200;
       setMyWalletLength(walletLength200)
       for (let i = 0; i <walletLength200; i++) {
-
+        let val=walletOfOwner200[i]
+        let  url_num=val+2770;
         try {
-          let res = await axios.get(`https://ulenftpolygon.mypinata.cloud/ipfs/QmfHrvnsA1dUJJxbRSmBscffSAezQb3uxFxBK3xwa1w1SW/${walletOfOwner200[i]}.gif`)
+          let res = await axios.get(`https://usdulenft.mypinata.cloud/ipfs/QmZfw5joy4ZDhXZiJu5EvRuNYEP38MAYbKcMjWdB3DfwTZ/${url_num}.gif`)
           // let res = await axios.get(`/config/${walletOfOwner[i]}.json`)
           let imageUrl = res.config.url;
           console.log("check", res);
@@ -183,7 +215,7 @@ export default function Front4() {
         }
       }
 
-
+   
       let walletOfOwner300 = await ULE_NFT_300_OF.methods.walletOfOwner(acc).call()
       let Price300=await ULE_NFT_300_OF.methods.MinitngPricein_token().call()
 
@@ -191,9 +223,10 @@ export default function Front4() {
       console.log("walletOfOwner",walletLength300);
       setMyWalletLength(walletLength300)
       for (let i = 0; i <walletLength300; i++) {
-
+        let val=walletOfOwner300[i]
+        let  url_num=val+3460;
         try {
-          let res = await axios.get(`https://ulenftpolygon.mypinata.cloud/ipfs/QmfHrvnsA1dUJJxbRSmBscffSAezQb3uxFxBK3xwa1w1SW/${walletOfOwner300[i]}.gif`)
+          let res = await axios.get(`https://usdulenft.mypinata.cloud/ipfs/QmVEzHWb59Zo9r9sUEY1CVwWoFQkYEk4VgHRYYT83Vq636/${url_num}.gif`)
           // let res = await axios.get(`/config/${walletOfOwner[i]}.json`)
           let imageUrl = res.config.url;
           console.log("check", res);
@@ -213,9 +246,10 @@ export default function Front4() {
       console.log("walletOfOwner",walletLength400);
       setMyWalletLength(walletLength400)
       for (let i = 0; i <walletLength400; i++) {
-
+        let val=walletOfOwner400[i]
+        let  url_num=val+4130;
         try {
-          let res = await axios.get(`https://ulenftpolygon.mypinata.cloud/ipfs/QmfHrvnsA1dUJJxbRSmBscffSAezQb3uxFxBK3xwa1w1SW/${walletOfOwner400[i]}.gif`)
+          let res = await axios.get(`https://usdulenft.mypinata.cloud/ipfs/QmVjhfnbMkBgsw1ijXGr6FFohhD55Nm7SZupTdkWEzzGQX/${url_num}.gif`)
           // let res = await axios.get(`/config/${walletOfOwner[i]}.json`)
           let imageUrl = res.config.url;
           console.log("check", res);
@@ -236,9 +270,10 @@ export default function Front4() {
       console.log("walletOfOwner",walletLength500);
       setMyWalletLength(walletLength500)
       for (let i = 0; i <walletLength500; i++) {
-
+        let val=walletOfOwner500[i]
+        let  url_num=val+4800;
         try {
-          let res = await axios.get(`https://ulenftpolygon.mypinata.cloud/ipfs/QmfHrvnsA1dUJJxbRSmBscffSAezQb3uxFxBK3xwa1w1SW/${walletOfOwner500[i]}.gif`)
+          let res = await axios.get(`https://usdulenft.mypinata.cloud/ipfs/QmYhnW22KPbckGWaePUASowNHKrck3Xk2XcVRbYM78ktTU/${url_num}.gif`)
           // let res = await axios.get(`/config/${walletOfOwner[i]}.json`)
           let imageUrl = res.config.url;
           console.log("check", res);
@@ -258,9 +293,10 @@ export default function Front4() {
       console.log("walletOfOwner",walletLength1000);
       setMyWalletLength(walletLength1000)
       for (let i = 0; i <walletLength1000; i++) {
-
+        let val=walletOfOwner1000[i]
+        let  url_num=val+5540;
         try {
-          let res = await axios.get(`https://ulenftpolygon.mypinata.cloud/ipfs/QmfHrvnsA1dUJJxbRSmBscffSAezQb3uxFxBK3xwa1w1SW/${walletOfOwner1000[i]}.gif`)
+          let res = await axios.get(`https://usdulenft.mypinata.cloud/ipfs/QmRpDTwYkr81eix3MJQuAYqMksXhdRFDutjzYok3Z7JHge/p1/${url_num}.gif`)
           // let res = await axios.get(`/config/${walletOfOwner[i]}.json`)
           let imageUrl = res.config.url;
           console.log("check", res);
@@ -280,9 +316,10 @@ export default function Front4() {
       console.log("walletOfOwner",walletLength2000);
       setMyWalletLength(walletLength2000)
       for (let i = 0; i <walletLength2000; i++) {
-
+        let val=walletOfOwner2000[i]
+        let  url_num=val+5840;
         try {
-          let res = await axios.get(`https://ulenftpolygon.mypinata.cloud/ipfs/QmfHrvnsA1dUJJxbRSmBscffSAezQb3uxFxBK3xwa1w1SW/${walletOfOwner2000[i]}.gif`)
+          let res = await axios.get(`https://usdulenft.mypinata.cloud/ipfs/QmPDQfrrLFiNwHPrE4f2oZP3Zspg4ZMk6jAu9spTNdmk4p/${url_num}.gif`)
           // let res = await axios.get(`/config/${walletOfOwner[i]}.json`)
           let imageUrl = res.config.url;
           console.log("check", res);
@@ -302,9 +339,10 @@ export default function Front4() {
       console.log("walletOfOwner",walletLength3000);
       setMyWalletLength(walletLength3000)
       for (let i = 0; i <walletLength3000; i++) {
-
+        let val=walletOfOwner3000[i]
+        let  url_num=val+6140;
         try {
-          let res = await axios.get(`https://ulenftpolygon.mypinata.cloud/ipfs/QmfHrvnsA1dUJJxbRSmBscffSAezQb3uxFxBK3xwa1w1SW/${walletOfOwner3000[i]}.gif`)
+          let res = await axios.get(`https://usdulenft.mypinata.cloud/ipfs/QmaFcyFxBQuo7qxvzN3PYm9W6oHeJypbiC9FuYhf6XeSEG/${url_num}.gif`)
           // let res = await axios.get(`/config/${walletOfOwner[i]}.json`)
           let imageUrl = res.config.url;
           console.log("check", res);
@@ -324,9 +362,10 @@ export default function Front4() {
       console.log("walletOfOwner",walletLength4000);
       setMyWalletLength(walletLength4000)
       for (let i = 0; i <walletLength4000; i++) {
-
+        let val=walletOfOwner4000[i]
+        let  url_num=val+6440;
         try {
-          let res = await axios.get(`https://ulenftpolygon.mypinata.cloud/ipfs/QmfHrvnsA1dUJJxbRSmBscffSAezQb3uxFxBK3xwa1w1SW/${walletOfOwner4000[i]}.gif`)
+          let res = await axios.get(`https://usdulenft.mypinata.cloud/ipfs/QmeBnPEeQTaGgvKLYq7Ej51Kq5Kh2dNjan5fTg1eNkWBjZ/${url_num}.gif`)
           // let res = await axios.get(`/config/${walletOfOwner[i]}.json`)
           let imageUrl = res.config.url;
           console.log("check", res);
@@ -346,9 +385,10 @@ export default function Front4() {
       console.log("walletOfOwner",walletLength5000);
       setMyWalletLength(walletLength5000)
       for (let i = 0; i <walletLength5000; i++) {
-
+        let val=walletOfOwner5000[i]
+        let  url_num=val+6740;
         try {
-          let res = await axios.get(`https://ulenftpolygon.mypinata.cloud/ipfs/QmfHrvnsA1dUJJxbRSmBscffSAezQb3uxFxBK3xwa1w1SW/${walletOfOwner5000[i]}.gif`)
+          let res = await axios.get(`https://usdulenft.mypinata.cloud/ipfs/QmcSECUxFXFpxVUzWP63qPyonfRt8qW5UaJHa8GDL9yZnV/${url_num}.gif`)
           // let res = await axios.get(`/config/${walletOfOwner[i]}.json`)
           let imageUrl = res.config.url;
           console.log("check", res);
@@ -368,9 +408,10 @@ export default function Front4() {
       console.log("walletOfOwner",walletLength10000);
       setMyWalletLength(walletLength10000)
       for (let i = 0; i <walletLength10000; i++) {
-
+        let val=walletOfOwner10000[i]
+        let  url_num=val+7040;
         try {
-          let res = await axios.get(`https://ulenftpolygon.mypinata.cloud/ipfs/QmfHrvnsA1dUJJxbRSmBscffSAezQb3uxFxBK3xwa1w1SW/${walletOfOwner10000[i]}.gif`)
+          let res = await axios.get(`https://usdulenft.mypinata.cloud/ipfs/QmeSFY6S6DzrhW7UPX9hfy6AvnwTahFQT15wCtWp7d25Mr/${url_num}.gif`)
           // let res = await axios.get(`/config/${walletOfOwner[i]}.json`)
           let imageUrl = res.config.url;
           console.log("check", res);
@@ -392,7 +433,8 @@ export default function Front4() {
       getAccount()  
     }, 500);
     allImagesNfts();
-  }, []);
+   
+  }, [imageArray]);
   return (
     <div>
 
@@ -410,9 +452,9 @@ export default function Front4() {
           </div>
 
           <div class="row justify-content-center">
-
-            {
-              imageArray.map((items, idex) => {
+         {
+             
+             imageArray.map((items, idex) => {
                 return (
 
                   <div class="col-sm-6 col-lg-4">
