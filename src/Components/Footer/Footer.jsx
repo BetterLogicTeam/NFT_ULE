@@ -26,7 +26,7 @@ function Footer() {
                 />
               </a>
               <p class="txt_white">
-                Create, sell and collect truly rare digital artworks. Powered by
+                Create, sell and collect truly rare digital art works. Powered by
                 blockchain technology.
               </p>
             </div>
