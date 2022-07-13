@@ -1561,7 +1561,7 @@ export const busdNftTokenAbi = [{
 
 
 
-export const ULE_NFT_100 = "0xEA83372466969f0a962Ee5d5A385753138FDfBEd";
+export const ULE_NFT_100 = "0x6F3f5a6d2E0e068fF97138020bc88c2F7417c868";
 export const ULE_NFT_100_ABI = [{
     "inputs": [{
         "internalType": "string",
@@ -1949,6 +1949,20 @@ export const ULE_NFT_100_ABI = [{
     "type": "function"
 }, {
     "inputs": [{
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+    }],
+    "name": "excludefromlimits",
+    "outputs": [{
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [{
         "internalType": "uint256",
         "name": "tokenId",
         "type": "uint256"
@@ -1958,6 +1972,20 @@ export const ULE_NFT_100_ABI = [{
         "internalType": "address",
         "name": "",
         "type": "address"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+    }],
+    "name": "initialMintTime",
+    "outputs": [{
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
     }],
     "stateMutability": "view",
     "type": "function"
@@ -1990,6 +2018,20 @@ export const ULE_NFT_100_ABI = [{
         "internalType": "bool",
         "name": "",
         "type": "bool"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+    }],
+    "name": "lastsend",
+    "outputs": [{
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
     }],
     "stateMutability": "view",
     "type": "function"
@@ -2283,11 +2325,41 @@ export const ULE_NFT_100_ABI = [{
     "type": "function"
 }, {
     "inputs": [{
+        "internalType": "address",
+        "name": "_addr",
+        "type": "address"
+    }],
+    "name": "setexcludefromlimits",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "uint256",
+        "name": "_newdays",
+        "type": "uint256"
+    }],
+    "name": "setlimit",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [{
         "internalType": "string",
         "name": "_newnotRevealedUri",
         "type": "string"
     }],
     "name": "setnotRevealedUri",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "address",
+        "name": "_stakingcontract",
+        "type": "address"
+    }],
+    "name": "setstaking",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -2478,8 +2550,7 @@ export const ULE_NFT_100_ABI = [{
     "stateMutability": "nonpayable",
     "type": "function"
 }]
-
-export const ULE_NFT_200 = "0x044aD3e6730f838D890cB51FE8dF231E275Ef1ce";
+export const ULE_NFT_200 = "0x67b39D89faF9765eb96dd20b74d057a6B907B92B";
 export const ULE_NFT_200_ABI = [{
     "inputs": [{
         "internalType": "string",
@@ -2867,6 +2938,20 @@ export const ULE_NFT_200_ABI = [{
     "type": "function"
 }, {
     "inputs": [{
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+    }],
+    "name": "excludefromlimits",
+    "outputs": [{
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [{
         "internalType": "uint256",
         "name": "tokenId",
         "type": "uint256"
@@ -2876,6 +2961,20 @@ export const ULE_NFT_200_ABI = [{
         "internalType": "address",
         "name": "",
         "type": "address"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+    }],
+    "name": "initialMintTime",
+    "outputs": [{
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
     }],
     "stateMutability": "view",
     "type": "function"
@@ -2908,6 +3007,20 @@ export const ULE_NFT_200_ABI = [{
         "internalType": "bool",
         "name": "",
         "type": "bool"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+    }],
+    "name": "lastsend",
+    "outputs": [{
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
     }],
     "stateMutability": "view",
     "type": "function"
@@ -3201,11 +3314,41 @@ export const ULE_NFT_200_ABI = [{
     "type": "function"
 }, {
     "inputs": [{
+        "internalType": "address",
+        "name": "_addr",
+        "type": "address"
+    }],
+    "name": "setexcludefromlimits",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "uint256",
+        "name": "_newdays",
+        "type": "uint256"
+    }],
+    "name": "setlimit",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [{
         "internalType": "string",
         "name": "_newnotRevealedUri",
         "type": "string"
     }],
     "name": "setnotRevealedUri",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "address",
+        "name": "_stakingcontract",
+        "type": "address"
+    }],
+    "name": "setstaking",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
