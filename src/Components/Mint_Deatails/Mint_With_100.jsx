@@ -81,7 +81,7 @@ export default function Mint_With_100() {
   let [btnThree, setButtonThree] = useState("Mint With Busd")
   const [inputdatahere, setinputdatahere] = useState("100")
   const [showModal, setShowModal] = useState(false)
-  const [showModal2, setShowModal2] = useState(false)
+  const [ImgeURL, setImgeURL] = useState()
 
   const [showModal3, setShowModal3] = useState(false)
 
@@ -293,7 +293,7 @@ export default function Mint_With_100() {
 
   const myMintWire = async () => {
 
-      setShowModal2(false)
+    
 
 
 
@@ -317,6 +317,7 @@ export default function Mint_With_100() {
                       // console.log("mintFor Wire");
                       const web3 = window.web3;
                       let nftContractOf = new web3.eth.Contract( ULE_NFT_100_ABI,ULE_NFT_100);
+                      
                       let wireContractOf = new web3.eth.Contract(wireTokenAbi, wireTokenAddress);
                       let totalnft = await nftContractOf.methods.MaxLimitPerTransaction().call();
 
@@ -366,19 +367,45 @@ export default function Mint_With_100() {
                                           let hash = await nftContractOf.methods.mint_with_token(data_value, totalMintingPriceWire).send({
                                               from: acc,
                                           })
+                                          let walletOfOwner100 = await nftContractOf.methods.walletOfOwner(acc).call()
+                                          let Price100=await nftContractOf.methods.MinitngPricein_token().call()
+                                          
+                                            let LastIndex_array=walletOfOwner100.slice(1).slice(-value)
+                                          let walletLength = LastIndex_array.length
+                                          console.log("walletOfOwner",walletLength);
+                                        //   setMyWalletLength(walletLength)
+                                          for (let i = 0; i <LastIndex_array; i++) {
+                                    
+                                            try {
+                                              let res = await axios.get(`https://usdulenft.mypinata.cloud/ipfs/QmdHtZGQU4FPBfytDAEyKYCqXHcNtzWSM6ymPuWVRnVR5Q/${walletOfOwner100[i]}.gif`)
+                                              // let res = await axios.get(`/config/${walletOfOwner[i]}.json`)
+                                              let imageUrl = res.config.url;
+                                              setImgeURL(imageUrl)
+                                              console.log("check", res);
+                                              let dna = Price100
+                                            //   simplleArray = [...simplleArray, { imageUrl: imageUrl, num: dna }]
+                                            //   setImageArray(simplleArray);
+                                            } catch (e) {
+                                              console.log("Error while Fetching Api", e)
+                                            }
+                                          }
+
                                           toast.success("Transaction Confirmed")
 
-                                          hash = hash.transactionHash
-                                          let postapi = await axios.post('https://whenftapi.herokuapp.com/buynfttoken', {
-                                              "uid": inputdatahere,
+                                        //   hash = hash.transactionHash
+                                          let postapi = await axios.post('https://ule-nft-api.herokuapp.com/buynfttoken', {
+                                              "uid": "101010",
                                               "address": acc,
                                               "nft": value,
                                               "token": totalMintingPriceWire,
-                                              "txn": hash
+                                              "usd":"200",
+                                              "nftcontract":ULE_NFT_100,
+                                              "url":ImgeURL,
+                                            //   "txn": hash
                                           })
 
-                                          // console.log("postapi", postapi);
-                                          // toast.success("Success", postapi.data.data)
+                                          console.log("postapi", postapi);
+                                          toast.success("Success", postapi.data.data)
 
 
                                           setButtonTwo("Mint With ULE")
@@ -702,24 +729,24 @@ export default function Mint_With_100() {
   }
 
 
-  const Sponser = () => {
+//   const Sponser = () => {
 
-      setShowModal(true)
-      if (showModal == true) {
+//       setShowModal(true)
+//       if (showModal == true) {
 
 
-      }
-  }
-  const Sponser2 = () => {
+//       }
+//   }
+//   const Sponser2 = () => {
 
-      setShowModal2(true)
+//       setShowModal2(true)
 
-  }
-  const Sponser3 = () => {
+//   }
+//   const Sponser3 = () => {
 
-      setShowModal3(true)
+//       setShowModal3(true)
 
-  }
+//   }
 
 
 
@@ -731,6 +758,7 @@ export default function Mint_With_100() {
 
           getMydata();
       }, 10000);
+
 
 
   }, [])

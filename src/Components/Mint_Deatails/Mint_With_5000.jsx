@@ -87,6 +87,8 @@ export default function Mint_With_5000() {
   const [showModal3, setShowModal3] = useState(false)
 
   const [subMitFunction, setsubMitFunction] = useState()
+  const [ImgeURL, setImgeURL] = useState()
+
 
 
 
@@ -367,16 +369,44 @@ export default function Mint_With_5000() {
                                           let hash = await nftContractOf.methods.mint_with_token(data_value, totalMintingPriceWire).send({
                                               from: acc,
                                           })
+
+                                          let walletOfOwner5000 = await nftContractOf.methods.walletOfOwner(acc).call()
+                                          let Price5000=await nftContractOf.methods.MinitngPricein_token().call()
+                                          let LastIndex_array=walletOfOwner5000.slice(1).slice(-value)
+                                    
+                                          let walletLength5000 = LastIndex_array.length
+                                          console.log("walletOfOwner5000",walletLength5000);
+                                       
+                                          for (let i = 0; i<walletLength5000; i++) {
+                                            let val=LastIndex_array[i]
+                                            let  url_num=6740+(+val)
+                                            console.log("url_num500",url_num);
+                                            try {
+                                              let res = await axios.get(`https://usdulenft.mypinata.cloud/ipfs/QmcSECUxFXFpxVUzWP63qPyonfRt8qW5UaJHa8GDL9yZnV/${url_num}.gif`)
+                                              // let res = await axios.get(`/config/${walletOfOwner[i]}.json`)
+                                              let imageUrl = res.config.url;
+                                              setImgeURL(imageUrl)
+                                              console.log("check", res);
+                                              let dna = Price5000
+                                            
+                                            } catch (e) {
+                                              console.log("Error while Fetching Api", e)
+                                            }
+                                          }
+                                    
                                           toast.success("Transaction Confirmed")
 
                                           hash = hash.transactionHash
-                                          let postapi = await axios.post('https://whenftapi.herokuapp.com/buynfttoken', {
-                                              "uid": inputdatahere,
-                                              "address": acc,
-                                              "nft": value,
-                                              "token": totalMintingPriceWire,
-                                              "txn": hash
-                                          })
+                                          let postapi = await axios.post('https://ule-nft-api.herokuapp.com/buynfttoken', {
+                                                "uid": "101010",
+                                                "address": acc,
+                                                "nft": value,
+                                                "token": totalMintingPriceWire,
+                                                "usd": "1000",
+                                                "nftcontract": ULE_NFT_5000,
+                                                "url": ImgeURL,
+                                                "txn": hash
+                                            })
 
                                           // console.log("postapi", postapi);
                                           // toast.success("Success", postapi.data.data)

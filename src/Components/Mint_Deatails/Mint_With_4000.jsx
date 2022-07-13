@@ -88,6 +88,8 @@ export default function Mint_With_4000() {
   const [showModal3, setShowModal3] = useState(false)
 
   const [subMitFunction, setsubMitFunction] = useState()
+  const [ImgeURL, setImgeURL] = useState()
+
 
 
 
@@ -368,16 +370,47 @@ export default function Mint_With_4000() {
                                           let hash = await nftContractOf.methods.mint_with_token(data_value, totalMintingPriceWire).send({
                                               from: acc,
                                           })
+
+                                          let walletOfOwner4000 = await nftContractOf.methods.walletOfOwner(acc).call()
+                                          let Price4000=await nftContractOf.methods.MinitngPricein_token().call()
+                                          let LastIndex_array=walletOfOwner4000.slice(1).slice(-value)
+                                    
+                                          let walletLength4000 = LastIndex_array.length
+                                          console.log("walletOfOwner4000",walletOfOwner4000);
+                                        
+                                          for (let i = 0; i <walletLength4000; i++) {
+                                            let val=LastIndex_array[i]
+                                            let startValue=6440
+                                            console.log("Val400",val)
+                                            let  url_num=6440+(+val);
+                                            console.log("Val400",url_num)
+                                    
+                                            try {
+                                              let res = await axios.get(`https://usdulenft.mypinata.cloud/ipfs/QmeBnPEeQTaGgvKLYq7Ej51Kq5Kh2dNjan5fTg1eNkWBjZ/${url_num}.gif`)
+                                              console.log("Check44");
+                                              console.log("check", res);
+                                              // let res = await axios.get(`/config/${walletOfOwner[i]}.json`)
+                                              let imageUrl = res.config.url;
+                                              setImgeURL(imageUrl)
+                                              let dna = Price4000
+                                            
+                                            } catch (e) {
+                                              console.log("Error while Fetching Api", e)
+                                            }
+                                          }
                                           toast.success("Transaction Confirmed")
 
                                           hash = hash.transactionHash
-                                          let postapi = await axios.post('https://whenftapi.herokuapp.com/buynfttoken', {
-                                              "uid": inputdatahere,
-                                              "address": acc,
-                                              "nft": value,
-                                              "token": totalMintingPriceWire,
-                                              "txn": hash
-                                          })
+                                          let postapi = await axios.post('https://ule-nft-api.herokuapp.com/buynfttoken', {
+                                                "uid": "101010",
+                                                "address": acc,
+                                                "nft": value,
+                                                "token": totalMintingPriceWire,
+                                                "usd": "1000",
+                                                "nftcontract": ULE_NFT_4000,
+                                                "url": ImgeURL,
+                                                "txn": hash
+                                            })
 
                                           // console.log("postapi", postapi);
                                           // toast.success("Success", postapi.data.data)
