@@ -11,6 +11,7 @@
     />
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" href="./css/style.css" />
     <!-- // Add the new slick-theme.css if you want the default styling -->
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logoule.png" />
@@ -84,7 +85,13 @@
 <script src="./swiper-bundle.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-
+<script>
+  $(document).ready(function(){
+      $('#show').click(function() {
+        $('.menuSow').toggle("fast");
+      });
+  });
+</script>
 
 
 </html>

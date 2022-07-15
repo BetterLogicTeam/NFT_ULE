@@ -49,6 +49,9 @@ export default function Header() {
   }, []);
   return (
     <div>
+     
+
+
       <div className="maina">
         <Navbar
           className="Headera"
@@ -58,9 +61,13 @@ export default function Header() {
           variant="dark"
         >
           <Container>
-            <Navbar.Brand className="pic">
-              <img src="logoule.png" alt="" width="80%" />
-            </Navbar.Brand>
+
+            <Link to="/" >
+              <Navbar.Brand className="pic">
+                <img src="logoule.png" alt="" width="80%" />
+              </Navbar.Brand>
+            </Link>
+
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="ms-auto nav_in_responsive ">
@@ -89,8 +96,8 @@ export default function Header() {
                     class="dropdown-menu"
                     aria-labelledby="dropdownMenuButton1"
                   >
-                   
-                   <li>
+
+                    <li>
                       <a class="dropdown-item">
                         {" "}
                         <Link to="Mint_With_100" className="text-d">
@@ -221,7 +228,7 @@ export default function Header() {
                 </Nav.Link>
 
                 <div className="asl">
-                <button className="btn btna_navbar_herea">{btnTxt}</button>
+                  <button className="btn btna_navbar_herea">{btnTxt}</button>
 
                 </div>
 
