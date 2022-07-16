@@ -163,8 +163,9 @@ export default function Front4() {
           // let res = await axios.get(`/config/${walletOfOwner[i]}.json`)
           let imageUrl = res.config.url;
           console.log("check", res);
-          let dna = Price100
-          simplleArray = [...simplleArray, { imageUrl: imageUrl, num: dna }]
+          let dna = Price100;
+          let token_id=walletOfOwner100[i]
+          simplleArray = [...simplleArray, { imageUrl: imageUrl, num: dna,token_id:token_id }]
           setImageArray(simplleArray);
         } catch (e) {
           console.log("Error while Fetching Api", e)
@@ -181,6 +182,7 @@ export default function Front4() {
       setMyWalletLength(walletLength200)
       for (let i = 0; i <walletLength200; i++) {
         let val=walletOfOwner200[i]
+        let token_id=walletOfOwner200[i]
        
         let  url_num=2770+(+val);
 
@@ -190,7 +192,7 @@ export default function Front4() {
           let imageUrl = res.config.url;
           console.log("check", res);
           let dna = Price200
-          simplleArray = [...simplleArray, { imageUrl: imageUrl, num: dna }]
+          simplleArray = [...simplleArray, { imageUrl: imageUrl, num: dna,token_id:token_id }]
           setImageArray(simplleArray);
         } catch (e) {
           console.log("Error while Fetching Api", e)
@@ -206,6 +208,7 @@ export default function Front4() {
       setMyWalletLength(walletLength300)
       for (let i = 0; i <walletLength300; i++) {
         let val=walletOfOwner300[i]
+        let token_id=walletOfOwner300[i]
        
         let  url_num=3460+(+val);
 
@@ -215,7 +218,7 @@ export default function Front4() {
           let imageUrl = res.config.url;
           console.log("check", res);
           let dna = Price300
-          simplleArray = [...simplleArray, { imageUrl: imageUrl, num: dna }]
+          simplleArray = [...simplleArray, { imageUrl: imageUrl, num: dna,token_id:token_id }]
           setImageArray(simplleArray);
         } catch (e) {
           console.log("Error while Fetching Api", e)
@@ -231,6 +234,7 @@ export default function Front4() {
       setMyWalletLength(walletLength400)
       for (let i = 0; i <walletLength400; i++) {
         let val=walletOfOwner400[i]
+        let token_id=walletOfOwner400[i]
        
         let  url_num=4130+(+val);
 
@@ -240,7 +244,7 @@ export default function Front4() {
           let imageUrl = res.config.url;
           console.log("check", res);
           let dna = Price400
-          simplleArray = [...simplleArray, { imageUrl: imageUrl, num: dna }]
+          simplleArray = [...simplleArray, { imageUrl: imageUrl, num: dna,token_id:token_id }]
           setImageArray(simplleArray);
         } catch (e) {
           console.log("Error while Fetching Api", e)
@@ -257,6 +261,7 @@ export default function Front4() {
       setMyWalletLength(walletLength500)
       for (let i = 0; i <walletLength500; i++) {
         let val=walletOfOwner500[i]
+        let token_id=walletOfOwner500[i]
        
         let  url_num=4800+(+val);
 
@@ -266,7 +271,7 @@ export default function Front4() {
           let imageUrl = res.config.url;
           console.log("check", res);
           let dna =Price500
-          simplleArray = [...simplleArray, { imageUrl: imageUrl, num: dna }]
+          simplleArray = [...simplleArray, { imageUrl: imageUrl, num: dna,token_id:token_id }]
           setImageArray(simplleArray);
         } catch (e) {
           console.log("Error while Fetching Api", e)
@@ -282,6 +287,8 @@ export default function Front4() {
       setMyWalletLength(walletLength1000)
       for (let i = 0; i <walletLength1000; i++) {
         let val=walletOfOwner1000[i]
+        let token_id=walletOfOwner1000[i]
+
   
         let  url_num=5540+(+val);
 
@@ -291,7 +298,7 @@ export default function Front4() {
           let imageUrl = res.config.url;
           console.log("check", res);
           let dna = Price1000
-          simplleArray = [...simplleArray, { imageUrl: imageUrl, num: dna }]
+          simplleArray = [...simplleArray, { imageUrl: imageUrl, num: dna,token_id:token_id }]
           setImageArray(simplleArray);
         } catch (e) {
           console.log("Error while Fetching Api", e)
@@ -307,6 +314,7 @@ export default function Front4() {
       setMyWalletLength(walletLength2000)
       for (let i = 0; i <walletLength2000; i++) {
         let val=walletOfOwner2000[i]
+        let token_id=walletOfOwner2000[i]
       
         let  url_num=5840+(+val);
 
@@ -316,7 +324,7 @@ export default function Front4() {
           let imageUrl = res.config.url;
           console.log("check", res);
           let dna = Price2000
-          simplleArray = [...simplleArray, { imageUrl: imageUrl, num: dna }]
+          simplleArray = [...simplleArray, { imageUrl: imageUrl, num: dna,token_id:token_id }]
           setImageArray(simplleArray);
         } catch (e) {
           console.log("Error while Fetching Api", e)
@@ -339,7 +347,9 @@ export default function Front4() {
           let imageUrl = res.config.url;
           console.log("check", res);
           let dna = Price3000
-          simplleArray = [...simplleArray, { imageUrl: imageUrl, num: dna }]
+        let token_id=walletOfOwner3000[i]
+
+          simplleArray = [...simplleArray, { imageUrl: imageUrl, num: dna,token_id:token_id }]
           setImageArray(simplleArray);
         } catch (e) {
           console.log("Error while Fetching Api", e)
@@ -364,8 +374,10 @@ export default function Front4() {
           console.log("check", res);
           // let res = await axios.get(`/config/${walletOfOwner[i]}.json`)
           let imageUrl = res.config.url;
+        let token_id=walletOfOwner4000[i]
+          
           let dna = Price4000
-          simplleArray = [...simplleArray, { imageUrl: imageUrl, num: dna }]
+          simplleArray = [...simplleArray, { imageUrl: imageUrl, num: dna,token_id: token_id }]
           setImageArray(simplleArray);
         } catch (e) {
           console.log("Error while Fetching Api", e)
@@ -391,8 +403,10 @@ export default function Front4() {
           // let res = await axios.get(`/config/${walletOfOwner[i]}.json`)
           let imageUrl = res.config.url;
           console.log("check", res);
+        let token_id=walletOfOwner5000[i]
+
           let dna = Price5000
-          simplleArray = [...simplleArray, { imageUrl: imageUrl, num: dna }]
+          simplleArray = [...simplleArray, { imageUrl: imageUrl, num: dna,token_id:token_id }]
           setImageArray(simplleArray);
         } catch (e) {
           console.log("Error while Fetching Api", e)
@@ -414,8 +428,10 @@ export default function Front4() {
           // let res = await axios.get(`/config/${walletOfOwner[i]}.json`)
           let imageUrl = res.config.url;
           console.log("check", res);
-          let dna = Price10000
-          simplleArray = [...simplleArray, { imageUrl: imageUrl, num: dna }]
+          let dna = Price10000;
+        let token_id=walletOfOwner10000[i]
+
+          simplleArray = [...simplleArray, { imageUrl: imageUrl, num: dna,token_id:token_id }]
           setImageArray(simplleArray);
         } catch (e) {
           console.log("Error while Fetching Api", e)
@@ -463,7 +479,7 @@ export default function Front4() {
                       </div>
 
                       <div class="collection-text home-2 text-center">
-                        <a href="#">ULE NFT {items.num} USD</a>
+                        <a href="#"> ULE NFT ID:{items.token_id}, {items.num} USD</a>
 
                       </div>
                     </div>
