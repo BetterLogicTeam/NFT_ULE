@@ -1561,7 +1561,7 @@ export const busdNftTokenAbi = [{
 
 
 
-export const ULE_NFT_100 = "0xFa6D000D86E0a901EF18eD62cD6D585650f3CD80";
+export const ULE_NFT_100 = "0x28A77132f9730A3144320b44A3fF04D36fFF35bd";
 export const ULE_NFT_100_ABI = [{
     "inputs": [{
         "internalType": "string",
@@ -2466,6 +2466,16 @@ export const ULE_NFT_100_ABI = [{
     "stateMutability": "nonpayable",
     "type": "function"
 }, {
+    "inputs": [],
+    "name": "staking",
+    "outputs": [{
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
     "inputs": [{
         "internalType": "bytes4",
         "name": "interfaceId",
@@ -2648,7 +2658,7 @@ export const ULE_NFT_100_ABI = [{
     "stateMutability": "nonpayable",
     "type": "function"
 }]
-export const ULE_NFT_200 = "0x67b39D89faF9765eb96dd20b74d057a6B907B92B";
+export const ULE_NFT_200 = "0xb421A330da1486c8ab10266dCBB8E175119f360d";
 export const ULE_NFT_200_ABI = [{
     "inputs": [{
         "internalType": "string",
@@ -3026,11 +3036,31 @@ export const ULE_NFT_200_ABI = [{
     "type": "function"
 }, {
     "inputs": [],
+    "name": "bnbmint",
+    "outputs": [{
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [],
     "name": "bnbtoULE",
     "outputs": [{
         "internalType": "uint256",
         "name": "",
         "type": "uint256"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "busdmint",
+    "outputs": [{
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
     }],
     "stateMutability": "view",
     "type": "function"
@@ -3119,6 +3149,16 @@ export const ULE_NFT_200_ABI = [{
         "internalType": "uint256",
         "name": "",
         "type": "uint256"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "liveprice",
+    "outputs": [{
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
     }],
     "stateMutability": "view",
     "type": "function"
@@ -3351,6 +3391,24 @@ export const ULE_NFT_200_ABI = [{
     "stateMutability": "nonpayable",
     "type": "function"
 }, {
+    "inputs": [],
+    "name": "setDisablemintwithbnb",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "setDisablemintwithbusd",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "setDisablemintwithtoken",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
     "inputs": [{
         "internalType": "uint256",
         "name": "_amount",
@@ -3393,6 +3451,16 @@ export const ULE_NFT_200_ABI = [{
 }, {
     "inputs": [{
         "internalType": "uint256",
+        "name": "value",
+        "type": "uint256"
+    }],
+    "name": "setULEprice",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "uint256",
         "name": "_value",
         "type": "uint256"
     }],
@@ -3407,6 +3475,24 @@ export const ULE_NFT_200_ABI = [{
         "type": "string"
     }],
     "name": "setbaseExtension",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "setenablemintwithbnb",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "setenablemintwithbusd",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "setenablemintwithtoken",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -3427,6 +3513,18 @@ export const ULE_NFT_200_ABI = [{
         "type": "uint256"
     }],
     "name": "setlimit",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "setlivepricedisenable",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "setlivepriceenable",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -3463,6 +3561,16 @@ export const ULE_NFT_200_ABI = [{
     "name": "setwhitelist",
     "outputs": [],
     "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "staking",
+    "outputs": [{
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+    }],
+    "stateMutability": "view",
     "type": "function"
 }, {
     "inputs": [{
@@ -3531,6 +3639,16 @@ export const ULE_NFT_200_ABI = [{
         "internalType": "string",
         "name": "",
         "type": "string"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "tokenmint",
+    "outputs": [{
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
     }],
     "stateMutability": "view",
     "type": "function"
@@ -3638,7 +3756,7 @@ export const ULE_NFT_200_ABI = [{
     "type": "function"
 }]
 
-export const ULE_NFT_300 = "0x182d91281bdA26979B1437CF9f84A705BbfA8cc4";
+export const ULE_NFT_300 = "0x8c90d0A8Fe0636485db4984C1707571531d3659c";
 export const ULE_NFT_300_ABI = [{
     "inputs": [{
         "internalType": "string",
@@ -4016,11 +4134,45 @@ export const ULE_NFT_300_ABI = [{
     "type": "function"
 }, {
     "inputs": [],
+    "name": "bnbmint",
+    "outputs": [{
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [],
     "name": "bnbtoULE",
     "outputs": [{
         "internalType": "uint256",
         "name": "",
         "type": "uint256"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "busdmint",
+    "outputs": [{
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+    }],
+    "name": "excludefromlimits",
+    "outputs": [{
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
     }],
     "stateMutability": "view",
     "type": "function"
@@ -4035,6 +4187,20 @@ export const ULE_NFT_300_ABI = [{
         "internalType": "address",
         "name": "",
         "type": "address"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+    }],
+    "name": "initialMintTime",
+    "outputs": [{
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
     }],
     "stateMutability": "view",
     "type": "function"
@@ -4063,6 +4229,30 @@ export const ULE_NFT_300_ABI = [{
         "type": "address"
     }],
     "name": "iswhitelist",
+    "outputs": [{
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+    }],
+    "name": "lastsend",
+    "outputs": [{
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "liveprice",
     "outputs": [{
         "internalType": "bool",
         "name": "",
@@ -4299,6 +4489,24 @@ export const ULE_NFT_300_ABI = [{
     "stateMutability": "nonpayable",
     "type": "function"
 }, {
+    "inputs": [],
+    "name": "setDisablemintwithbnb",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "setDisablemintwithbusd",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "setDisablemintwithtoken",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
     "inputs": [{
         "internalType": "uint256",
         "name": "_amount",
@@ -4341,6 +4549,16 @@ export const ULE_NFT_300_ABI = [{
 }, {
     "inputs": [{
         "internalType": "uint256",
+        "name": "value",
+        "type": "uint256"
+    }],
+    "name": "setULEprice",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "uint256",
         "name": "_value",
         "type": "uint256"
     }],
@@ -4359,12 +4577,72 @@ export const ULE_NFT_300_ABI = [{
     "stateMutability": "nonpayable",
     "type": "function"
 }, {
+    "inputs": [],
+    "name": "setenablemintwithbnb",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "setenablemintwithbusd",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "setenablemintwithtoken",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "address",
+        "name": "_addr",
+        "type": "address"
+    }],
+    "name": "setexcludefromlimits",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "uint256",
+        "name": "_newdays",
+        "type": "uint256"
+    }],
+    "name": "setlimit",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "setlivepricedisenable",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "setlivepriceenable",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
     "inputs": [{
         "internalType": "string",
         "name": "_newnotRevealedUri",
         "type": "string"
     }],
     "name": "setnotRevealedUri",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "address",
+        "name": "_stakingcontract",
+        "type": "address"
+    }],
+    "name": "setstaking",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -4381,6 +4659,16 @@ export const ULE_NFT_300_ABI = [{
     "name": "setwhitelist",
     "outputs": [],
     "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "staking",
+    "outputs": [{
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+    }],
+    "stateMutability": "view",
     "type": "function"
 }, {
     "inputs": [{
@@ -4449,6 +4737,16 @@ export const ULE_NFT_300_ABI = [{
         "internalType": "string",
         "name": "",
         "type": "string"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "tokenmint",
+    "outputs": [{
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
     }],
     "stateMutability": "view",
     "type": "function"
@@ -4556,7 +4854,7 @@ export const ULE_NFT_300_ABI = [{
     "type": "function"
 }]
 
-export const ULE_NFT_400 = "0xcFFF649df7b9698D78d7A89B6ea19082E25cFccC";
+export const ULE_NFT_400 = "0xDCFC78033f28c46ff7750207A219f48e15909765";
 export const ULE_NFT_400_ABI = [{
     "inputs": [{
         "internalType": "string",
@@ -4934,11 +5232,45 @@ export const ULE_NFT_400_ABI = [{
     "type": "function"
 }, {
     "inputs": [],
+    "name": "bnbmint",
+    "outputs": [{
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [],
     "name": "bnbtoULE",
     "outputs": [{
         "internalType": "uint256",
         "name": "",
         "type": "uint256"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "busdmint",
+    "outputs": [{
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+    }],
+    "name": "excludefromlimits",
+    "outputs": [{
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
     }],
     "stateMutability": "view",
     "type": "function"
@@ -4953,6 +5285,20 @@ export const ULE_NFT_400_ABI = [{
         "internalType": "address",
         "name": "",
         "type": "address"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+    }],
+    "name": "initialMintTime",
+    "outputs": [{
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
     }],
     "stateMutability": "view",
     "type": "function"
@@ -4981,6 +5327,30 @@ export const ULE_NFT_400_ABI = [{
         "type": "address"
     }],
     "name": "iswhitelist",
+    "outputs": [{
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+    }],
+    "name": "lastsend",
+    "outputs": [{
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "liveprice",
     "outputs": [{
         "internalType": "bool",
         "name": "",
@@ -5217,6 +5587,24 @@ export const ULE_NFT_400_ABI = [{
     "stateMutability": "nonpayable",
     "type": "function"
 }, {
+    "inputs": [],
+    "name": "setDisablemintwithbnb",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "setDisablemintwithbusd",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "setDisablemintwithtoken",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
     "inputs": [{
         "internalType": "uint256",
         "name": "_amount",
@@ -5259,6 +5647,16 @@ export const ULE_NFT_400_ABI = [{
 }, {
     "inputs": [{
         "internalType": "uint256",
+        "name": "value",
+        "type": "uint256"
+    }],
+    "name": "setULEprice",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "uint256",
         "name": "_value",
         "type": "uint256"
     }],
@@ -5277,12 +5675,72 @@ export const ULE_NFT_400_ABI = [{
     "stateMutability": "nonpayable",
     "type": "function"
 }, {
+    "inputs": [],
+    "name": "setenablemintwithbnb",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "setenablemintwithbusd",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "setenablemintwithtoken",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "address",
+        "name": "_addr",
+        "type": "address"
+    }],
+    "name": "setexcludefromlimits",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "uint256",
+        "name": "_newdays",
+        "type": "uint256"
+    }],
+    "name": "setlimit",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "setlivepricedisenable",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "setlivepriceenable",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
     "inputs": [{
         "internalType": "string",
         "name": "_newnotRevealedUri",
         "type": "string"
     }],
     "name": "setnotRevealedUri",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "address",
+        "name": "_stakingcontract",
+        "type": "address"
+    }],
+    "name": "setstaking",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -5299,6 +5757,16 @@ export const ULE_NFT_400_ABI = [{
     "name": "setwhitelist",
     "outputs": [],
     "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "staking",
+    "outputs": [{
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+    }],
+    "stateMutability": "view",
     "type": "function"
 }, {
     "inputs": [{
@@ -5367,6 +5835,16 @@ export const ULE_NFT_400_ABI = [{
         "internalType": "string",
         "name": "",
         "type": "string"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "tokenmint",
+    "outputs": [{
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
     }],
     "stateMutability": "view",
     "type": "function"
@@ -5474,7 +5952,7 @@ export const ULE_NFT_400_ABI = [{
     "type": "function"
 }]
 
-export const ULE_NFT_500 = "0x2244Bda379576c385797744df5Ed5c8dfC801a4E";
+export const ULE_NFT_500 = "0x8A034352C8Fe547DA8252DF1584B22E3A86E44c5";
 export const ULE_NFT_500_ABI = [{
     "inputs": [{
         "internalType": "string",
@@ -5852,11 +6330,45 @@ export const ULE_NFT_500_ABI = [{
     "type": "function"
 }, {
     "inputs": [],
+    "name": "bnbmint",
+    "outputs": [{
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [],
     "name": "bnbtoULE",
     "outputs": [{
         "internalType": "uint256",
         "name": "",
         "type": "uint256"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "busdmint",
+    "outputs": [{
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+    }],
+    "name": "excludefromlimits",
+    "outputs": [{
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
     }],
     "stateMutability": "view",
     "type": "function"
@@ -5871,6 +6383,20 @@ export const ULE_NFT_500_ABI = [{
         "internalType": "address",
         "name": "",
         "type": "address"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+    }],
+    "name": "initialMintTime",
+    "outputs": [{
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
     }],
     "stateMutability": "view",
     "type": "function"
@@ -5899,6 +6425,30 @@ export const ULE_NFT_500_ABI = [{
         "type": "address"
     }],
     "name": "iswhitelist",
+    "outputs": [{
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+    }],
+    "name": "lastsend",
+    "outputs": [{
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "liveprice",
     "outputs": [{
         "internalType": "bool",
         "name": "",
@@ -6135,6 +6685,24 @@ export const ULE_NFT_500_ABI = [{
     "stateMutability": "nonpayable",
     "type": "function"
 }, {
+    "inputs": [],
+    "name": "setDisablemintwithbnb",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "setDisablemintwithbusd",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "setDisablemintwithtoken",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
     "inputs": [{
         "internalType": "uint256",
         "name": "_amount",
@@ -6177,6 +6745,16 @@ export const ULE_NFT_500_ABI = [{
 }, {
     "inputs": [{
         "internalType": "uint256",
+        "name": "value",
+        "type": "uint256"
+    }],
+    "name": "setULEprice",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "uint256",
         "name": "_value",
         "type": "uint256"
     }],
@@ -6195,12 +6773,72 @@ export const ULE_NFT_500_ABI = [{
     "stateMutability": "nonpayable",
     "type": "function"
 }, {
+    "inputs": [],
+    "name": "setenablemintwithbnb",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "setenablemintwithbusd",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "setenablemintwithtoken",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "address",
+        "name": "_addr",
+        "type": "address"
+    }],
+    "name": "setexcludefromlimits",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "uint256",
+        "name": "_newdays",
+        "type": "uint256"
+    }],
+    "name": "setlimit",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "setlivepricedisenable",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "setlivepriceenable",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
     "inputs": [{
         "internalType": "string",
         "name": "_newnotRevealedUri",
         "type": "string"
     }],
     "name": "setnotRevealedUri",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "address",
+        "name": "_stakingcontract",
+        "type": "address"
+    }],
+    "name": "setstaking",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -6217,6 +6855,16 @@ export const ULE_NFT_500_ABI = [{
     "name": "setwhitelist",
     "outputs": [],
     "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "staking",
+    "outputs": [{
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+    }],
+    "stateMutability": "view",
     "type": "function"
 }, {
     "inputs": [{
@@ -6285,6 +6933,16 @@ export const ULE_NFT_500_ABI = [{
         "internalType": "string",
         "name": "",
         "type": "string"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "tokenmint",
+    "outputs": [{
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
     }],
     "stateMutability": "view",
     "type": "function"
@@ -6392,7 +7050,7 @@ export const ULE_NFT_500_ABI = [{
     "type": "function"
 }]
 
-export const ULE_NFT_1000 = "0xA4ecB24558bBB705f520Ea741f98690badE626C3";
+export const ULE_NFT_1000 = "0x8373cCC71B7bc1aF54E8e7f779442f42EF4d585F";
 export const ULE_NFT_1000_ABI = [{
     "inputs": [{
         "internalType": "string",
@@ -6770,11 +7428,45 @@ export const ULE_NFT_1000_ABI = [{
     "type": "function"
 }, {
     "inputs": [],
+    "name": "bnbmint",
+    "outputs": [{
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [],
     "name": "bnbtoULE",
     "outputs": [{
         "internalType": "uint256",
         "name": "",
         "type": "uint256"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "busdmint",
+    "outputs": [{
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+    }],
+    "name": "excludefromlimits",
+    "outputs": [{
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
     }],
     "stateMutability": "view",
     "type": "function"
@@ -6789,6 +7481,20 @@ export const ULE_NFT_1000_ABI = [{
         "internalType": "address",
         "name": "",
         "type": "address"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+    }],
+    "name": "initialMintTime",
+    "outputs": [{
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
     }],
     "stateMutability": "view",
     "type": "function"
@@ -6817,6 +7523,30 @@ export const ULE_NFT_1000_ABI = [{
         "type": "address"
     }],
     "name": "iswhitelist",
+    "outputs": [{
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+    }],
+    "name": "lastsend",
+    "outputs": [{
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "liveprice",
     "outputs": [{
         "internalType": "bool",
         "name": "",
@@ -7053,6 +7783,24 @@ export const ULE_NFT_1000_ABI = [{
     "stateMutability": "nonpayable",
     "type": "function"
 }, {
+    "inputs": [],
+    "name": "setDisablemintwithbnb",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "setDisablemintwithbusd",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "setDisablemintwithtoken",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
     "inputs": [{
         "internalType": "uint256",
         "name": "_amount",
@@ -7095,6 +7843,16 @@ export const ULE_NFT_1000_ABI = [{
 }, {
     "inputs": [{
         "internalType": "uint256",
+        "name": "value",
+        "type": "uint256"
+    }],
+    "name": "setULEprice",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "uint256",
         "name": "_value",
         "type": "uint256"
     }],
@@ -7113,12 +7871,72 @@ export const ULE_NFT_1000_ABI = [{
     "stateMutability": "nonpayable",
     "type": "function"
 }, {
+    "inputs": [],
+    "name": "setenablemintwithbnb",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "setenablemintwithbusd",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "setenablemintwithtoken",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "address",
+        "name": "_addr",
+        "type": "address"
+    }],
+    "name": "setexcludefromlimits",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "uint256",
+        "name": "_newdays",
+        "type": "uint256"
+    }],
+    "name": "setlimit",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "setlivepricedisenable",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "setlivepriceenable",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
     "inputs": [{
         "internalType": "string",
         "name": "_newnotRevealedUri",
         "type": "string"
     }],
     "name": "setnotRevealedUri",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "address",
+        "name": "_stakingcontract",
+        "type": "address"
+    }],
+    "name": "setstaking",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -7135,6 +7953,16 @@ export const ULE_NFT_1000_ABI = [{
     "name": "setwhitelist",
     "outputs": [],
     "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "staking",
+    "outputs": [{
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+    }],
+    "stateMutability": "view",
     "type": "function"
 }, {
     "inputs": [{
@@ -7203,6 +8031,16 @@ export const ULE_NFT_1000_ABI = [{
         "internalType": "string",
         "name": "",
         "type": "string"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "tokenmint",
+    "outputs": [{
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
     }],
     "stateMutability": "view",
     "type": "function"
@@ -7311,7 +8149,7 @@ export const ULE_NFT_1000_ABI = [{
 }]
 
 
-export const ULE_NFT_2000 = "0x8c91a26007b4563e3EEF35394C38e9AfF30f4aa2";
+export const ULE_NFT_2000 = "0xbd4aBd0ec142bC9898c03e0CAC6d539d20Cae73D";
 export const ULE_NFT_2000_ABI = [{
     "inputs": [{
         "internalType": "string",
@@ -7689,11 +8527,45 @@ export const ULE_NFT_2000_ABI = [{
     "type": "function"
 }, {
     "inputs": [],
+    "name": "bnbmint",
+    "outputs": [{
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [],
     "name": "bnbtoULE",
     "outputs": [{
         "internalType": "uint256",
         "name": "",
         "type": "uint256"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "busdmint",
+    "outputs": [{
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+    }],
+    "name": "excludefromlimits",
+    "outputs": [{
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
     }],
     "stateMutability": "view",
     "type": "function"
@@ -7708,6 +8580,20 @@ export const ULE_NFT_2000_ABI = [{
         "internalType": "address",
         "name": "",
         "type": "address"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+    }],
+    "name": "initialMintTime",
+    "outputs": [{
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
     }],
     "stateMutability": "view",
     "type": "function"
@@ -7736,6 +8622,30 @@ export const ULE_NFT_2000_ABI = [{
         "type": "address"
     }],
     "name": "iswhitelist",
+    "outputs": [{
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+    }],
+    "name": "lastsend",
+    "outputs": [{
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "liveprice",
     "outputs": [{
         "internalType": "bool",
         "name": "",
@@ -7972,6 +8882,24 @@ export const ULE_NFT_2000_ABI = [{
     "stateMutability": "nonpayable",
     "type": "function"
 }, {
+    "inputs": [],
+    "name": "setDisablemintwithbnb",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "setDisablemintwithbusd",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "setDisablemintwithtoken",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
     "inputs": [{
         "internalType": "uint256",
         "name": "_amount",
@@ -8014,6 +8942,16 @@ export const ULE_NFT_2000_ABI = [{
 }, {
     "inputs": [{
         "internalType": "uint256",
+        "name": "value",
+        "type": "uint256"
+    }],
+    "name": "setULEprice",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "uint256",
         "name": "_value",
         "type": "uint256"
     }],
@@ -8032,12 +8970,72 @@ export const ULE_NFT_2000_ABI = [{
     "stateMutability": "nonpayable",
     "type": "function"
 }, {
+    "inputs": [],
+    "name": "setenablemintwithbnb",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "setenablemintwithbusd",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "setenablemintwithtoken",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "address",
+        "name": "_addr",
+        "type": "address"
+    }],
+    "name": "setexcludefromlimits",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "uint256",
+        "name": "_newdays",
+        "type": "uint256"
+    }],
+    "name": "setlimit",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "setlivepricedisenable",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "setlivepriceenable",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
     "inputs": [{
         "internalType": "string",
         "name": "_newnotRevealedUri",
         "type": "string"
     }],
     "name": "setnotRevealedUri",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "address",
+        "name": "_stakingcontract",
+        "type": "address"
+    }],
+    "name": "setstaking",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -8054,6 +9052,16 @@ export const ULE_NFT_2000_ABI = [{
     "name": "setwhitelist",
     "outputs": [],
     "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "staking",
+    "outputs": [{
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+    }],
+    "stateMutability": "view",
     "type": "function"
 }, {
     "inputs": [{
@@ -8122,6 +9130,16 @@ export const ULE_NFT_2000_ABI = [{
         "internalType": "string",
         "name": "",
         "type": "string"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "tokenmint",
+    "outputs": [{
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
     }],
     "stateMutability": "view",
     "type": "function"
@@ -8228,8 +9246,7 @@ export const ULE_NFT_2000_ABI = [{
     "stateMutability": "nonpayable",
     "type": "function"
 }]
-
-export const ULE_NFT_3000 = "0x62cbE23c25209885e822B81cBe4c38BC5A35cCC1";
+export const ULE_NFT_3000 = "0xc43e08D2f715A706D898CbfAc057d4F88c6A8b84";
 export const ULE_NFT_3000_ABI = [{
     "inputs": [{
         "internalType": "string",
@@ -8607,11 +9624,45 @@ export const ULE_NFT_3000_ABI = [{
     "type": "function"
 }, {
     "inputs": [],
+    "name": "bnbmint",
+    "outputs": [{
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [],
     "name": "bnbtoULE",
     "outputs": [{
         "internalType": "uint256",
         "name": "",
         "type": "uint256"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "busdmint",
+    "outputs": [{
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+    }],
+    "name": "excludefromlimits",
+    "outputs": [{
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
     }],
     "stateMutability": "view",
     "type": "function"
@@ -8626,6 +9677,20 @@ export const ULE_NFT_3000_ABI = [{
         "internalType": "address",
         "name": "",
         "type": "address"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+    }],
+    "name": "initialMintTime",
+    "outputs": [{
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
     }],
     "stateMutability": "view",
     "type": "function"
@@ -8654,6 +9719,30 @@ export const ULE_NFT_3000_ABI = [{
         "type": "address"
     }],
     "name": "iswhitelist",
+    "outputs": [{
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+    }],
+    "name": "lastsend",
+    "outputs": [{
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "liveprice",
     "outputs": [{
         "internalType": "bool",
         "name": "",
@@ -8890,6 +9979,24 @@ export const ULE_NFT_3000_ABI = [{
     "stateMutability": "nonpayable",
     "type": "function"
 }, {
+    "inputs": [],
+    "name": "setDisablemintwithbnb",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "setDisablemintwithbusd",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "setDisablemintwithtoken",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
     "inputs": [{
         "internalType": "uint256",
         "name": "_amount",
@@ -8932,6 +10039,16 @@ export const ULE_NFT_3000_ABI = [{
 }, {
     "inputs": [{
         "internalType": "uint256",
+        "name": "value",
+        "type": "uint256"
+    }],
+    "name": "setULEprice",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "uint256",
         "name": "_value",
         "type": "uint256"
     }],
@@ -8950,12 +10067,72 @@ export const ULE_NFT_3000_ABI = [{
     "stateMutability": "nonpayable",
     "type": "function"
 }, {
+    "inputs": [],
+    "name": "setenablemintwithbnb",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "setenablemintwithbusd",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "setenablemintwithtoken",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "address",
+        "name": "_addr",
+        "type": "address"
+    }],
+    "name": "setexcludefromlimits",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "uint256",
+        "name": "_newdays",
+        "type": "uint256"
+    }],
+    "name": "setlimit",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "setlivepricedisenable",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "setlivepriceenable",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
     "inputs": [{
         "internalType": "string",
         "name": "_newnotRevealedUri",
         "type": "string"
     }],
     "name": "setnotRevealedUri",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "address",
+        "name": "_stakingcontract",
+        "type": "address"
+    }],
+    "name": "setstaking",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -8972,6 +10149,16 @@ export const ULE_NFT_3000_ABI = [{
     "name": "setwhitelist",
     "outputs": [],
     "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "staking",
+    "outputs": [{
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+    }],
+    "stateMutability": "view",
     "type": "function"
 }, {
     "inputs": [{
@@ -9040,6 +10227,16 @@ export const ULE_NFT_3000_ABI = [{
         "internalType": "string",
         "name": "",
         "type": "string"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "tokenmint",
+    "outputs": [{
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
     }],
     "stateMutability": "view",
     "type": "function"
@@ -9147,7 +10344,7 @@ export const ULE_NFT_3000_ABI = [{
     "type": "function"
 }]
 
-export const ULE_NFT_4000 = "0xbb81F21d24e6b83f73d9dbdc456B7Ba6Fab02F90";
+export const ULE_NFT_4000 = "0xF3A0714048C7C986Be36FF4e24A265567903555D";
 export const ULE_NFT_4000_ABI = [{
     "inputs": [{
         "internalType": "string",
@@ -9525,11 +10722,45 @@ export const ULE_NFT_4000_ABI = [{
     "type": "function"
 }, {
     "inputs": [],
+    "name": "bnbmint",
+    "outputs": [{
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [],
     "name": "bnbtoULE",
     "outputs": [{
         "internalType": "uint256",
         "name": "",
         "type": "uint256"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "busdmint",
+    "outputs": [{
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+    }],
+    "name": "excludefromlimits",
+    "outputs": [{
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
     }],
     "stateMutability": "view",
     "type": "function"
@@ -9544,6 +10775,20 @@ export const ULE_NFT_4000_ABI = [{
         "internalType": "address",
         "name": "",
         "type": "address"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+    }],
+    "name": "initialMintTime",
+    "outputs": [{
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
     }],
     "stateMutability": "view",
     "type": "function"
@@ -9572,6 +10817,30 @@ export const ULE_NFT_4000_ABI = [{
         "type": "address"
     }],
     "name": "iswhitelist",
+    "outputs": [{
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+    }],
+    "name": "lastsend",
+    "outputs": [{
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "liveprice",
     "outputs": [{
         "internalType": "bool",
         "name": "",
@@ -9808,6 +11077,24 @@ export const ULE_NFT_4000_ABI = [{
     "stateMutability": "nonpayable",
     "type": "function"
 }, {
+    "inputs": [],
+    "name": "setDisablemintwithbnb",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "setDisablemintwithbusd",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "setDisablemintwithtoken",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
     "inputs": [{
         "internalType": "uint256",
         "name": "_amount",
@@ -9850,6 +11137,16 @@ export const ULE_NFT_4000_ABI = [{
 }, {
     "inputs": [{
         "internalType": "uint256",
+        "name": "value",
+        "type": "uint256"
+    }],
+    "name": "setULEprice",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "uint256",
         "name": "_value",
         "type": "uint256"
     }],
@@ -9868,12 +11165,72 @@ export const ULE_NFT_4000_ABI = [{
     "stateMutability": "nonpayable",
     "type": "function"
 }, {
+    "inputs": [],
+    "name": "setenablemintwithbnb",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "setenablemintwithbusd",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "setenablemintwithtoken",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "address",
+        "name": "_addr",
+        "type": "address"
+    }],
+    "name": "setexcludefromlimits",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "uint256",
+        "name": "_newdays",
+        "type": "uint256"
+    }],
+    "name": "setlimit",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "setlivepricedisenable",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "setlivepriceenable",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
     "inputs": [{
         "internalType": "string",
         "name": "_newnotRevealedUri",
         "type": "string"
     }],
     "name": "setnotRevealedUri",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "address",
+        "name": "_stakingcontract",
+        "type": "address"
+    }],
+    "name": "setstaking",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -9890,6 +11247,16 @@ export const ULE_NFT_4000_ABI = [{
     "name": "setwhitelist",
     "outputs": [],
     "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "staking",
+    "outputs": [{
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+    }],
+    "stateMutability": "view",
     "type": "function"
 }, {
     "inputs": [{
@@ -9958,6 +11325,16 @@ export const ULE_NFT_4000_ABI = [{
         "internalType": "string",
         "name": "",
         "type": "string"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "tokenmint",
+    "outputs": [{
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
     }],
     "stateMutability": "view",
     "type": "function"
@@ -10065,7 +11442,7 @@ export const ULE_NFT_4000_ABI = [{
     "type": "function"
 }]
 
-export const ULE_NFT_5000 = "0x8ee0870Db4D3b578e190ec386B72a1E6c61f1e9c"
+export const ULE_NFT_5000 = "0x8f8a427E5d6dF4E3721EB4F3D7A4BAd077db2216"
 export const ULE_NFT_5000_ABI = [{
     "inputs": [{
         "internalType": "string",
@@ -10443,11 +11820,45 @@ export const ULE_NFT_5000_ABI = [{
     "type": "function"
 }, {
     "inputs": [],
+    "name": "bnbmint",
+    "outputs": [{
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [],
     "name": "bnbtoULE",
     "outputs": [{
         "internalType": "uint256",
         "name": "",
         "type": "uint256"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "busdmint",
+    "outputs": [{
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+    }],
+    "name": "excludefromlimits",
+    "outputs": [{
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
     }],
     "stateMutability": "view",
     "type": "function"
@@ -10462,6 +11873,20 @@ export const ULE_NFT_5000_ABI = [{
         "internalType": "address",
         "name": "",
         "type": "address"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+    }],
+    "name": "initialMintTime",
+    "outputs": [{
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
     }],
     "stateMutability": "view",
     "type": "function"
@@ -10490,6 +11915,30 @@ export const ULE_NFT_5000_ABI = [{
         "type": "address"
     }],
     "name": "iswhitelist",
+    "outputs": [{
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+    }],
+    "name": "lastsend",
+    "outputs": [{
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "liveprice",
     "outputs": [{
         "internalType": "bool",
         "name": "",
@@ -10726,6 +12175,24 @@ export const ULE_NFT_5000_ABI = [{
     "stateMutability": "nonpayable",
     "type": "function"
 }, {
+    "inputs": [],
+    "name": "setDisablemintwithbnb",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "setDisablemintwithbusd",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "setDisablemintwithtoken",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
     "inputs": [{
         "internalType": "uint256",
         "name": "_amount",
@@ -10768,6 +12235,16 @@ export const ULE_NFT_5000_ABI = [{
 }, {
     "inputs": [{
         "internalType": "uint256",
+        "name": "value",
+        "type": "uint256"
+    }],
+    "name": "setULEprice",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "uint256",
         "name": "_value",
         "type": "uint256"
     }],
@@ -10786,12 +12263,72 @@ export const ULE_NFT_5000_ABI = [{
     "stateMutability": "nonpayable",
     "type": "function"
 }, {
+    "inputs": [],
+    "name": "setenablemintwithbnb",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "setenablemintwithbusd",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "setenablemintwithtoken",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "address",
+        "name": "_addr",
+        "type": "address"
+    }],
+    "name": "setexcludefromlimits",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "uint256",
+        "name": "_newdays",
+        "type": "uint256"
+    }],
+    "name": "setlimit",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "setlivepricedisenable",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "setlivepriceenable",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
     "inputs": [{
         "internalType": "string",
         "name": "_newnotRevealedUri",
         "type": "string"
     }],
     "name": "setnotRevealedUri",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "address",
+        "name": "_stakingcontract",
+        "type": "address"
+    }],
+    "name": "setstaking",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -10808,6 +12345,16 @@ export const ULE_NFT_5000_ABI = [{
     "name": "setwhitelist",
     "outputs": [],
     "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "staking",
+    "outputs": [{
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+    }],
+    "stateMutability": "view",
     "type": "function"
 }, {
     "inputs": [{
@@ -10876,6 +12423,16 @@ export const ULE_NFT_5000_ABI = [{
         "internalType": "string",
         "name": "",
         "type": "string"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "tokenmint",
+    "outputs": [{
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
     }],
     "stateMutability": "view",
     "type": "function"
@@ -10983,7 +12540,7 @@ export const ULE_NFT_5000_ABI = [{
     "type": "function"
 }]
 
-export const ULE_NFT_10000 = "0x1C421a7f9a97f10896cE4cb8B977C3E677aA62A9"
+export const ULE_NFT_10000 = "0x76353734BCbB445B733134d708B5a5c513Dc4F55"
 export const ULE_NFT_10000_ABI = [{
     "inputs": [{
         "internalType": "string",
@@ -11361,11 +12918,45 @@ export const ULE_NFT_10000_ABI = [{
     "type": "function"
 }, {
     "inputs": [],
+    "name": "bnbmint",
+    "outputs": [{
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [],
     "name": "bnbtoULE",
     "outputs": [{
         "internalType": "uint256",
         "name": "",
         "type": "uint256"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "busdmint",
+    "outputs": [{
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+    }],
+    "name": "excludefromlimits",
+    "outputs": [{
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
     }],
     "stateMutability": "view",
     "type": "function"
@@ -11380,6 +12971,20 @@ export const ULE_NFT_10000_ABI = [{
         "internalType": "address",
         "name": "",
         "type": "address"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+    }],
+    "name": "initialMintTime",
+    "outputs": [{
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
     }],
     "stateMutability": "view",
     "type": "function"
@@ -11408,6 +13013,30 @@ export const ULE_NFT_10000_ABI = [{
         "type": "address"
     }],
     "name": "iswhitelist",
+    "outputs": [{
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+    }],
+    "name": "lastsend",
+    "outputs": [{
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "liveprice",
     "outputs": [{
         "internalType": "bool",
         "name": "",
@@ -11644,6 +13273,24 @@ export const ULE_NFT_10000_ABI = [{
     "stateMutability": "nonpayable",
     "type": "function"
 }, {
+    "inputs": [],
+    "name": "setDisablemintwithbnb",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "setDisablemintwithbusd",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "setDisablemintwithtoken",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
     "inputs": [{
         "internalType": "uint256",
         "name": "_amount",
@@ -11686,6 +13333,16 @@ export const ULE_NFT_10000_ABI = [{
 }, {
     "inputs": [{
         "internalType": "uint256",
+        "name": "value",
+        "type": "uint256"
+    }],
+    "name": "setULEprice",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "uint256",
         "name": "_value",
         "type": "uint256"
     }],
@@ -11704,12 +13361,72 @@ export const ULE_NFT_10000_ABI = [{
     "stateMutability": "nonpayable",
     "type": "function"
 }, {
+    "inputs": [],
+    "name": "setenablemintwithbnb",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "setenablemintwithbusd",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "setenablemintwithtoken",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "address",
+        "name": "_addr",
+        "type": "address"
+    }],
+    "name": "setexcludefromlimits",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "uint256",
+        "name": "_newdays",
+        "type": "uint256"
+    }],
+    "name": "setlimit",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "setlivepricedisenable",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "setlivepriceenable",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
     "inputs": [{
         "internalType": "string",
         "name": "_newnotRevealedUri",
         "type": "string"
     }],
     "name": "setnotRevealedUri",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "address",
+        "name": "_stakingcontract",
+        "type": "address"
+    }],
+    "name": "setstaking",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -11726,6 +13443,16 @@ export const ULE_NFT_10000_ABI = [{
     "name": "setwhitelist",
     "outputs": [],
     "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "staking",
+    "outputs": [{
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+    }],
+    "stateMutability": "view",
     "type": "function"
 }, {
     "inputs": [{
@@ -11794,6 +13521,16 @@ export const ULE_NFT_10000_ABI = [{
         "internalType": "string",
         "name": "",
         "type": "string"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "tokenmint",
+    "outputs": [{
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
     }],
     "stateMutability": "view",
     "type": "function"
