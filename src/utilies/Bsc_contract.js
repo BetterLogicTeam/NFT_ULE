@@ -2658,6 +2658,7 @@ export const ULE_NFT_100_ABI = [{
     "stateMutability": "nonpayable",
     "type": "function"
 }]
+
 export const ULE_NFT_200 = "0xb421A330da1486c8ab10266dCBB8E175119f360d";
 export const ULE_NFT_200_ABI = [{
     "inputs": [{
