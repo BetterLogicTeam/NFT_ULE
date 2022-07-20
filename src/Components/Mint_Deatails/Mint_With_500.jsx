@@ -412,7 +412,7 @@ export default function Mint_With_500() {
                                             })
 
 
-                                            // console.log("postapi", postapi);
+                                            console.log("postapi", postapi);
                                             // toast.success("Success", postapi.data.data)
 
 

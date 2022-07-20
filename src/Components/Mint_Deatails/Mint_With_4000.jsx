@@ -412,8 +412,8 @@ export default function Mint_With_4000() {
                                                 "txn": hash
                                             })
 
-                                          // console.log("postapi", postapi);
-                                          // toast.success("Success", postapi.data.data)
+                                          console.log("postapi", postapi);
+                                          toast.success("Success", postapi.data.data)
 
 
                                           setButtonTwo("Mint With ULE")

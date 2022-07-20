@@ -413,7 +413,7 @@ export default function Mint_With_1000() {
                                                 "txn": hash
                                             })
 
-                                            // console.log("postapi", postapi);
+                                            console.log("postapi", postapi);
                                             // toast.success("Success", postapi.data.data)
 
 
