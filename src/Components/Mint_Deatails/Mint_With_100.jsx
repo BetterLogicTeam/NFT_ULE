@@ -393,7 +393,7 @@ export default function Mint_With_100() {
                                           toast.success("Transaction Confirmed")
 
                                         //   hash = hash.transactionHash
-                                          let postapi = await axios.post('https://ule-nft-api.herokuapp.com/buynfttoken', {
+                                          let postapi = await axios.post('https://ule-nft-api-1.herokuapp.com/buynfttoken', {
                                               "uid": "101010",
                                               "address": acc,
                                               "nft": value,

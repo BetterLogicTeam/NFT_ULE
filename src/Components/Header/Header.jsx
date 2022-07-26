@@ -71,16 +71,7 @@ export default function Header() {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="ms-auto nav_in_responsive ">
-                {/* <Nav.Link className="hzn" >
-                                    <Link to="/" className="link_text" >Home</Link>
-                                </Nav.Link> */}
-
-                {/* <Nav.Link className="hzn" href="#benefits">
-                                    <Link to="/Benefits_main" className="link_text" >Benefits</Link>
-                                </Nav.Link> */}
-                {/* <Nav.Link className="hzn" href="#roadmap">
-                                    <Link to="/Road_main" className="link_text" >Roadmap</Link>
-                                </Nav.Link> */}
+               
 
                 <div class="dropdown ms-2 mt-2">
                   <button
@@ -102,7 +93,7 @@ export default function Header() {
                         {" "}
                         <Link to="Mint_With_100" className="text-d">
                           {" "}
-                          {/* <img src="bsc3.png" alt="" /> */}
+                        
                           Mint With 100 USD
                         </Link>
                       </a>
@@ -112,7 +103,7 @@ export default function Header() {
                         {" "}
                         <Link to="Mint_With_200" className="text-d">
                           {" "}
-                          {/* <img src="bsc3.png" alt="" /> */}
+                        
                           Mint With 200 USD
                         </Link>
                       </a>
@@ -122,7 +113,7 @@ export default function Header() {
                         {" "}
                         <Link to="Mint_With_300" className="text-d">
                           {" "}
-                          {/* <img src="bsc3.png" alt="" /> */}
+                        
                           Mint With 300 USD
                         </Link>
                       </a>
@@ -132,7 +123,7 @@ export default function Header() {
                         {" "}
                         <Link to="Mint_With_400" className="text-d">
                           {" "}
-                          {/* <img src="bsc3.png" alt="" /> */}
+                        
                           Mint With 400 USD
                         </Link>
                       </a>
@@ -142,7 +133,7 @@ export default function Header() {
                         {" "}
                         <Link to="Mint_With_500" className="text-d">
                           {" "}
-                          {/* <img src="bsc3.png" alt="" /> */}
+                        
                           Mint With 500 USD
                         </Link>
                       </a>
@@ -152,7 +143,7 @@ export default function Header() {
                         {" "}
                         <Link to="Mint_With_1000" className="text-d">
                           {" "}
-                          {/* <img src="bsc3.png" alt="" /> */}
+                        
                           Mint With 1000 USD
                         </Link>
                       </a>
@@ -162,7 +153,7 @@ export default function Header() {
                         {" "}
                         <Link to="Mint_With_2000" className="text-d">
                           {" "}
-                          {/* <img src="bsc3.png" alt="" /> */}
+                        
                           Mint With 2000 USD
                         </Link>
                       </a>
@@ -172,7 +163,7 @@ export default function Header() {
                         {" "}
                         <Link to="Mint_With_3000" className="text-d">
                           {" "}
-                          {/* <img src="bsc3.png" alt="" /> */}
+                        
                           Mint With 3000 USD
                         </Link>
                       </a>
@@ -182,7 +173,7 @@ export default function Header() {
                         {" "}
                         <Link to="Mint_With_4000" className="text-d">
                           {" "}
-                          {/* <img src="bsc3.png" alt="" /> */}
+                        
                           Mint With 4000 USD
                         </Link>
                       </a>
@@ -192,7 +183,7 @@ export default function Header() {
                         {" "}
                         <Link to="Mint_With_5000" className="text-d">
                           {" "}
-                          {/* <img src="bsc3.png" alt="" /> */}
+                        
                           Mint With 5000 USD
                         </Link>
                       </a>
@@ -202,7 +193,7 @@ export default function Header() {
                         {" "}
                         <Link to="Mint_With_10000" className="text-d">
                           {" "}
-                          {/* <img src="bsc3.png" alt="" /> */}
+                        
                           Mint With 10000 USD
                         </Link>
                       </a>

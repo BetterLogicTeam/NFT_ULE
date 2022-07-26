@@ -24,7 +24,7 @@ export default function Crypto() {
   const WheTokenPrice = async() => {
 
     try{
-      let getdata= await axios.get("https://ule-nft-api.herokuapp.com/ulematicliverate?id=1")
+      let getdata= await axios.get("https://ule-nft-api-1.herokuapp.com/ulematicliverate?id=1")
       // console.log("secondapi",getdata.data.data);
 
       setdataapi(getdata.data.data).toFixed(4)
