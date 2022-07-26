@@ -311,10 +311,10 @@ export default function Mint_With_200() {
           try {
               // console.log("inputdatahere", inputdatahere);
 
-              let res = await axios.get(`https://whenftapi.herokuapp.com/checkuser?id=${inputdatahere}`)
-              // console.log("resdatahere", res.data.data);
-              res = res.data.data;
-              if (res == 1) {
+            //   let res = await axios.get(`https://whenftapi.herokuapp.com/checkuser?id=${inputdatahere}`)
+            //   // console.log("resdatahere", res.data.data);
+            //   res = res.data.data;
+            //   if (res == 1) {
                   try {
                       setButtonTwo("Please Wait While Processing")
                       // console.log("mintFor Wire");
@@ -490,12 +490,12 @@ export default function Mint_With_200() {
                       setButtonTwo("Mint With ULE")
 
                   }
-              } else {
-                  toast.error("User Is Not Exists")
-                  setinputdatahere(" ")
+            //   } else {
+            //       toast.error("User Is Not Exists")
+            //       setinputdatahere(" ")
 
 
-              }
+            //   }
 
 
           } catch (e) {
