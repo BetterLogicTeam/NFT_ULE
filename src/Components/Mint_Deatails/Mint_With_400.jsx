@@ -335,11 +335,13 @@ export default function Mint_With_400() {
                           let ttlSupply = await nftContractOf.methods.totalSupply().call();
                           let paused = await nftContractOf.methods.paused().call();
                           let maxLimitprTransaction = await nftContractOf.methods.MaxLimitPerTransaction().call();
-                          let mintingWirePrice = await nftContractOf.methods.ValueinULE().call()
-                          // mintingWirePrice = mintingWirePrice[1]
-                          mintingWirePrice = web3.utils.fromWei(mintingWirePrice);
-                          // console.log("mintingWirePrice", mintingWirePrice);
-                          mintingWirePrice = parseFloat(mintingWirePrice);
+                        //   let mintingWirePrice = await nftContractOf.methods.ValueinULE().call()
+                        //   mintingWirePrice = web3.utils.fromWei(mintingWirePrice);
+                        //   mintingWirePrice = parseFloat(mintingWirePrice);
+                        let mintingWirePrice = await axios.get('https://ule-nft-api-1.herokuapp.com/100UsdInUle?id=1')
+
+                        mintingWirePrice = parseFloat(mintingWirePrice.data.data*4);
+                        console.log("200",mintingWirePrice);
                           let totalMintingPriceWire = value * mintingWirePrice + 0.01
                           totalMintingPriceWire = web3.utils.toWei(totalMintingPriceWire.toString())
                           // console.log("totalMintingPriceWire",totalMintingPriceWire);
@@ -712,10 +714,13 @@ export default function Mint_With_400() {
           setMintPriceBUSD(mintingBusdPrice)
 
 
-          let mintingWirePrice = await nftContractOf.methods.ValueinULE().call()
-          // mintingWirePrice = mintingWirePrice[1]
-          mintingWirePrice = web3.utils.fromWei(mintingWirePrice)
-          mintingWirePrice = parseFloat(mintingWirePrice).toFixed(1)
+        //   let mintingWirePrice = await nftContractOf.methods.ValueinULE().call()
+        //   mintingWirePrice = web3.utils.fromWei(mintingWirePrice)
+        let mintingWirePrice = await axios.get('https://ule-nft-api-1.herokuapp.com/100UsdInUle?id=1')
+
+        mintingWirePrice = parseFloat(mintingWirePrice.data.data*4).toFixed(1);
+        console.log("400",mintingWirePrice);
+        //   mintingWirePrice = parseFloat(mintingWirePrice).toFixed(1)
           setmintPriceWire(mintingWirePrice);
 
           let mintingbnbPrice = await nftContractOf.methods.Valueinbnb().call()
