@@ -479,7 +479,7 @@ export default function Front4() {
                       </div>
 
                       <div class="collection-text home-2 text-center">
-                        <a href="#"> ULE NFT ID:{items.token_id}, {items.num} USD</a>
+                        <a href="#"> YULE NFT ID:{items.token_id}, {items.num} USD</a>
 
                       </div>
                     </div>

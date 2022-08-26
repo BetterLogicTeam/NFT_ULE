@@ -77,7 +77,7 @@ export default function Mint_With_100() {
     let [mintPriceBUSD, setMintPriceBUSD] = useState(0);
     let [mintPriceWire, setmintPriceWire] = useState(0);
     let [btnOne, setButtonOne] = useState("Mint With BNB");
-    let [btnTwo, setButtonTwo] = useState("Mint With ULE");
+    let [btnTwo, setButtonTwo] = useState("Mint With YULE");
     let [btnThree, setButtonThree] = useState("Mint With Busd")
     const [inputdatahere, setinputdatahere] = useState("100")
     const [showModal, setShowModal] = useState(false)
@@ -409,7 +409,7 @@ export default function Mint_With_100() {
                                         toast.success("Success", postapi.data.data)
 
 
-                                        setButtonTwo("Mint With ULE")
+                                        setButtonTwo("Mint With YULE")
                                         setinputdatahere(" ")
 
 
@@ -427,7 +427,7 @@ export default function Mint_With_100() {
                                         //     from: acc,
                                         // })
                                         // toast.success("Transaction Succefful")
-                                        // setButtonTwo("Mint With ULE")
+                                        // setButtonTwo("Mint With YULE")
                                         // // console.log("hash", hash.transactionHash);
                                         // hash = hash.transactionHash
                                         // let postapi = await axios.post('https://whenftapi.herokuapp.com/buynfttoken', {
@@ -446,24 +446,24 @@ export default function Mint_With_100() {
 
                                     } else {
                                         toast.error("Out Of Balance")
-                                        setButtonTwo("Mint With ULE")
+                                        setButtonTwo("Mint With YULE")
 
                                     }
 
                                 } else {
                                     toast.error("No of Minting is Greater than maximum limit Per Transaction")
-                                    setButtonTwo("Mint With ULE")
+                                    setButtonTwo("Mint With YULE")
 
                                 }
                             } else {
                                 toast.error("Paused is False")
-                                setButtonTwo("Mint With ULE")
+                                setButtonTwo("Mint With YULE")
 
                             }
 
                         } else {
                             toast.error("Max Supply is Greater than total Supply")
-                            setButtonTwo("Mint With ULE")
+                            setButtonTwo("Mint With YULE")
 
                         }
 
@@ -481,7 +481,7 @@ export default function Mint_With_100() {
                 } catch (e) {
                     console.log("Error while minting ", e)
                     toast.error("Transaction failed")
-                    setButtonTwo("Mint With ULE")
+                    setButtonTwo("Mint With YULE")
 
                 }
                 // } else {
@@ -713,7 +713,7 @@ export default function Mint_With_100() {
             // console.log("mintingWirePric",mintingWirePric);
             // mintingWirePrice = mintingWirePrice[1]
             let mintingWirePrice = await axios.get('https://ule-nft-api-1.herokuapp.com/100UsdInUle?id=1')
-            console.log("Ule", mintingWirePrice.data.data);
+            console.log("YULE", mintingWirePrice.data.data);
             mintingWirePrice = mintingWirePrice.data.data
             mintingWirePrice = parseFloat(mintingWirePrice).toFixed(1)
             setmintPriceWire(mintingWirePrice);
@@ -834,7 +834,7 @@ export default function Mint_With_100() {
                                                         <a class="btn btn-box" onClick={() => myMintWire()}>
                                                             {btnTwo}
                                                         </a>
-                                                        <p className="fs-4 text-white" style={{ marginLeft: "1rem" }}>Price : {mintPriceWire} ULE</p>
+                                                        <p className="fs-4 text-white" style={{ marginLeft: "1rem" }}>Price : {mintPriceWire} YULE</p>
                                                     </div>
                                                     {/* <div className="btn-area1 mt-5">
                                                         <a class="btn btn-box" onClick={() => myMintBUSD()}>

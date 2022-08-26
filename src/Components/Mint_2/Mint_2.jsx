@@ -22,18 +22,18 @@ function Mint_2() {
                                 </div>
                                 <div class="mint_flex">
                                     <div class="mint_btn">
-                                        <button class="btn button">Mint With ULE BNB</button>
+                                        <button class="btn button">Mint With YULE BNB</button>
                                     </div>
                                     <div class="mint_price">
-                                        <p>Price : 0 ULE BNB</p>
+                                        <p>Price : 0 YULE BNB</p>
                                     </div>
                                 </div>
                                 <div class="mint_flex">
                                     <div class="mint_btn">
-                                        <button class="btn button">Mint With ULE POL</button>
+                                        <button class="btn button">Mint With YULE POL</button>
                                     </div>
                                     <div class="mint_price">
-                                        <p>Price : 0 ULE POL</p>
+                                        <p>Price : 0 YULE POL</p>
                                     </div>
                                 </div>
                             </div>
@@ -46,7 +46,7 @@ function Mint_2() {
                 <div class="container">
                     <div class="row_width">
                         <div class="collection">
-                            <h1>Multi-chain ULE nfts </h1>
+                            <h1>Multi-chain YULE nfts </h1>
                              <div class="font-display text-jacarta-700 mb-12 text-center text-3xl dark:text-white">
                                 <p style={{fontSize: "18px"}}>Smart Contract</p>
                             </div>

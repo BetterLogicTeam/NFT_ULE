@@ -66,11 +66,11 @@ export default function Crypto() {
                         <div class="col_3">
                             <div class="crypto">
                                 <div class="crypto_img">
-                                    <img src="ule-100.png"/>
+                                    <img src="YULE-100.png"/>
                                 </div>
                                 <div class="crypto_content">
-                                    <p>ULE</p>
-                                    <h1> ULE {dataapi}</h1>
+                                    <p>YULE</p>
+                                    <h1> YULE {dataapi}</h1>
                                 </div>
                             </div>
                         </div>

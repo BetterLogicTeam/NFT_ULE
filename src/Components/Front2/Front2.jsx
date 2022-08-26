@@ -8,9 +8,9 @@ export default function Front2() {
         <div class="container">
           <div class="row benefits">
             <div class="col-12 text-center">
-              <h1 class="heading-title">BENEFITS OF ULE CLUB NFTs</h1>
+              <h1 class="heading-title">BENEFITS OF YULE CLUB NFTs</h1>
               <p className="kami">
-              Holders of ULE NFTs will get exclusive membership to ULE club a private members only club in the metaverse
+              Holders of YULE NFTs will get exclusive membership to YULE club a private members only club in the metaverse
               </p>
             </div>
           </div>
@@ -35,7 +35,7 @@ export default function Front2() {
                     know it’s real because you see the artist’s signature on the
                     canvas. Somebody can photocopy the painting, but they don’t
                     own it — you do. Before NFTs, digital assets were like
-                    photocopies: When you buy a ULE Club NFT, the artwork is
+                    photocopies: When you buy a YULE Club NFT, the artwork is
                     yours to keep or use in advertising, Whether you plan to
                     sell it or not.
                   </p>
@@ -49,16 +49,16 @@ export default function Front2() {
                   {/* <h4>
                     <a href="#">Explore the Metaverse with us</a>
                   </h4> */}
-                  <h1>EXPLORE THE ULE nft's WITH US</h1>
+                  <h1>EXPLORE THE YULE nft's WITH US</h1>
                   <p>
-                    The ULE nft's is an online, three-dimensional universe that
+                    The YULE nft's is an online, three-dimensional universe that
                     combines multiple virtual spaces. It can be compared to a
                     future version of the internet. With metaverse, users will
                     be able to collaborate, meet, play games, and socialize in
-                    these 3D spaces. By joining the ULE Club, you will have
+                    these 3D spaces. By joining the YULE Club, you will have
                     access to every metaverse we enter. Plus, there will be
                     additional perks within our metaverse Private members club
-                    for ULE Club NFT holders.
+                    for YULE Club NFT holders.
                   </p>
                 </div>
               </div>
@@ -71,10 +71,10 @@ export default function Front2() {
                     Display art in high resolution
                   </h1>
                   <p class="">
-                    An ULE nft's token has metadata encoded permanently on the
+                    An YULE nft's token has metadata encoded permanently on the
                     blockchain in a format that is "non fungible", it includes a
                     URI which points to a unique JPEG, a piece of art which is
-                    the visual representation of this token, All ULE Club NFTs
+                    the visual representation of this token, All YULE Club NFTs
                     are available as high-resolution jpegs, which allows you to
                     print a high-quality physical copy or display it on screen.
                   </p>

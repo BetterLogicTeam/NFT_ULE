@@ -64,7 +64,7 @@ export default function Header() {
 
             <Link to="/" >
               <Navbar.Brand className="pic">
-                <img src="logoule.png" alt="" width="80%" />
+                <img src="logoyule.png" alt="" width="100%" />
               </Navbar.Brand>
             </Link>
 

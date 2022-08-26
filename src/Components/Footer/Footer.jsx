@@ -15,7 +15,7 @@ function Footer() {
             <div class="width_4">
               <a href="index.html" class="mb-6 aaa inline-block">
                 <img
-                  src="logoule.png"
+                  src="logoyule.png"
                   class="max-h-7 dark:hidden"
                   alt="Xhibiter | NFT Marketplace"
                 />
