@@ -98,7 +98,7 @@ function Footer() {
               class="dark:text-jacarta-400 text-sm"
               style={{ color: "white" }}
             >
-              © 2022 nft.ule.community
+              © 2022 yulenft.com
             </span>
             {/* <ul class="dark:text-jacarta-400 flex flex-wrap space-x-4 text-sm">
               <li>
